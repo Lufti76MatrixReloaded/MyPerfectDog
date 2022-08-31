@@ -1,0 +1,7 @@
+package de.syntaxinstitut.myperfectdog.data.model
+
+class Dogs(
+    val stringResource: Int,
+    val imageResource: Int,
+    val height: Int
+)

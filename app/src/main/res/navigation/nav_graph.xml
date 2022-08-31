@@ -3,20 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/oneFragment">
-
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/oneFragment"
-        android:name="de.syntaxinstitut.myperfectdog.ui.one.OneFragment"
-        android:label="OneFragment"
-        tools:layout="@layout/fragment_one">
+        android:id="@+id/homeFragment"
+        android:name="de.syntaxinstitut.myperfectdog.ui.Home.HomeFragment"
+        android:label="HomeFragment" >
+        <argument
+            android:name="stringId"
+            app:argType="integer" />
+        <argument
+            android:name="imageId"
+            app:argType="integer" />
         <action
-            android:id="@+id/action_oneFragment_to_twoFragment"
-            app:destination="@id/twoFragment" />
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/twoFragment"
-        android:name="de.syntaxinstitut.myperfectdog.ui.two.TwoFragment"
-        android:label="TwoFragment"
-        tools:layout="@layout/fragment_two"/>
+        android:id="@+id/detailFragment"
+        android:name="de.syntaxinstitut.myperfectdog.ui.Details.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="stringId"
+            app:argType="integer" />
+        <argument
+            android:name="imageId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

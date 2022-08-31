@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:animateLayoutChanges="false"
+        android:background="@color/ic_launcher_my_perfect_dog_background">
+
+        <TextView
+            android:id="@+id/titel_text_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:autoLink="phone"
+            android:autoText="false"
+            android:elegantTextHeight="true"
+            android:fontFamily="serif-monospace"
+            android:text="@string/my_perfect_dog"
+            android:textAlignment="center"
+            android:textColor="@color/material_dynamic_neutral99"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+        <ScrollView
+            android:id="@+id/sc_home_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="378dp"
+            android:layout_height="254dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/dogName35"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/belgischer_sch_ferhund__malinois_" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/tv_Einleitung"
+            android:layout_width="372dp"
+            android:layout_height="258dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="serif"
+            android:labelFor="@id/titel_text_View"
+            android:text="@string/die_vielfalt_der_hunderassen_ist_gro_jede_einzelne_zeichnet_sich_durch_ihr_besonderes_aussehen_einen_individuellen_charakter_und_spezielle_bed_rfnisse_aus_bevor_sie_in_die_riesige_welt_der_hunderassen_eintauchen_erfahren_sie_hier_mehr_ber_ihre_besonderheiten_und_entstehung"
+            android:textAlignment="center"
+            android:textColor="@color/material_dynamic_neutral99"
+            android:textSize="20sp"
+            android:typeface="normal"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/main_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/material_on_background_emphasis_high_type"
+            android:checkable="false"
+            android:imeOptions="normal|actionNext"
+            android:text="START"
+            android:textAllCaps="true"
+            android:textColor="#EC100B"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sc_home_fragment"
+            app:layout_constraintEnd_toEndOf="@+id/tv_Einleitung"
+            app:layout_constraintStart_toStartOf="@+id/tv_Einleitung"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Einleitung" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

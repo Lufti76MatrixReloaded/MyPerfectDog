@@ -16,6 +16,7 @@ buildscript {
     }
     dependencies {
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$view_model")
+        classpath 'com.google.gms:google-services:4.3.13'  // Google Services plugin
     }
 }
 
