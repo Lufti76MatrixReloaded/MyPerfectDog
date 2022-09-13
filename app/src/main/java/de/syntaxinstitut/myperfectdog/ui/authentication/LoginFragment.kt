@@ -8,20 +8,20 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import de.syntaxinstitut.myperfectdog.R
-import de.syntaxinstitut.myperfectdog.ui.Home.HomeViewModel
+import com.example.apicalls.R
+import de.syntaxinstitut.myperfectdog.MainViewModel
 import java.util.*
 
 class LoginFragment : Fragment() {
 
-    private lateinit var binding: FragmentLoginBinding
+    private lateinit var binding: LoginFragment
 
-    private val viewModel: HomeViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
@@ -31,26 +31,27 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.loginSignupButton.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
+        binding..setOnClickListener {
+            findNavController().navigate(LoginFragment.actionLoginFragmentToSignUpFragment())
         }
 
-        binding.loginButton.setOnClickListener {
-            val email = binding.loginEmailEdit.text.toString()
-            val password = binding.loginPasswordEdit.text.toString()
+        binding.loginFragment.loginBtn.setOnClickListener {
+            val email = binding.LoginFragment.loginEmailEdit.text.toString()
+            val password = binding.LoginFragment.loginPasswordEdit.text.toString()
 
             if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
                 viewModel.login(email, password)
             }
         }
 
-        viewModel.currentUser.observe(
-            viewLifecycleOwner,
-            Observer {
-                if (it != null) {
-                    findNavController().navigate(R.id.homeFragment)
-                }
+        viewModel.dogs.observe(
+            Observer(
+            ) lifeCycleOwner
+        ) {
+            if (it != null) {
+                findNavController()
+                    .navigate(R.id.loginFragment)
             }
-        )
+        }
     }
 }

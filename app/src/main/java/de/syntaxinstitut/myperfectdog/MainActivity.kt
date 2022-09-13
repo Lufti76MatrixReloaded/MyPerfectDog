@@ -10,12 +10,12 @@ import de.syntaxinstitut.myperfectdog.databinding.ActivityMainBinding
  */
 class MainActivity : AppCompatActivity() {
 
-    /* -------------------- Klassen Variablen -------------------- */
+	/* -------------------- Klassen Variablen -------------------- */
 
-    /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
-    private lateinit var binding: ActivityMainBinding
+	/** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
+	private lateinit var binding: ActivityMainBinding
 
-    /* -------------------- Lifecycle -------------------- */
+	/* -------------------- Lifecycle -------------------- */
 
     /**
      * Lifecycle Methode, wird aufgerufen wenn Activity erstellt wird
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Das Binding zur XML-Datei
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-    }
+		// Das Binding zur XML-Datei
+		binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+	}
 }

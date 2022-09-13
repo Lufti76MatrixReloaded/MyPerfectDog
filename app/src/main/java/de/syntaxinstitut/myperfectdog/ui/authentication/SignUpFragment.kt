@@ -9,13 +9,16 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import de.syntaxinstitut.myperfectdog.R
-import de.syntaxinstitut.myperfectdog.databinding.FragmentHomeBinding
-import de.syntaxinstitut.myperfectdog.ui.Home.HomeViewModel
+import com.example.apicalls.R
+import de.syntaxinstitut.myperfectdog.MainViewModel
+import de.syntaxinstitut.myperfectdog.ui.Main.MainViewModel
+import kotlinx.coroutines.Dispatchers.Main
 
 class SignUpFragment : Fragment() {
 
-    private val viewModel: HomeViewModel by activityViewModels()
+    private val viewModel: MainViewModel by activityViewModels()
+
+    class FragmentSignupBinding
 
     private lateinit var binding: FragmentSignupBinding
 
@@ -24,6 +27,7 @@ class SignUpFragment : Fragment() {
         container: ViewGroup,
         savedInstanceState: Bundle?
     ): View {
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_signup, container, false)
 
         return binding.root

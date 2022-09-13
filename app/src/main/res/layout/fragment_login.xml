@@ -1,69 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:tag="'fragment_login'"
-    app:layout_constraintHorizontal_bias="0.498">
-
-    <TextView
-        android:id="@+id/title_text"
-        android:layout_width="102dp"
-        android:layout_height="45dp"
-        android:layout_margin="92dp"
-        android:layout_marginTop="92dp"
-        android:text="Login"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="220dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="36dp"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="@+id/login_password_edit"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="@+id/login_password_edit"
-        app:layout_constraintTop_toBottomOf="@+id/login_password_edit" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_signup_button"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="220dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="28dp"
-        android:text="Sign Up"
-        app:layout_constraintEnd_toEndOf="@+id/login_button"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/login_button"
-        app:layout_constraintTop_toBottomOf="@+id/login_button" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/login_email_edit"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/title_text"
-        app:layout_constraintStart_toStartOf="@+id/title_text"
-        app:layout_constraintTop_toBottomOf="@+id/title_text" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/login_password_edit"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_margin="24dp"
-        android:ems="10"
-        android:hint="password"
-        app:layout_constraintEnd_toEndOf="@+id/login_email_edit"
-        app:layout_constraintStart_toStartOf="@+id/login_email_edit"
-        app:layout_constraintTop_toBottomOf="@+id/login_email_edit" />
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/cl_login"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<View
+		android:id="@+id/login_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@color/ic_launcher_my_perfect_dog_background"
+		android:textAlignment="gravity"
+		android:textDirection="inherit"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.0" />
+	
+	<TextView
+		android:id="@+id/tv_login"
+		android:layout_width="153dp"
+		android:layout_height="49dp"
+		android:layout_marginTop="108dp"
+		android:text="LOGIN"
+		android:textAlignment="center"
+		android:textColor="@color/material_dynamic_neutral99"
+		android:textSize="48sp"
+		android:textStyle="bold|italic"
+		app:autoSizeTextType="none"
+		app:layout_constraintEnd_toEndOf="@+id/login_view"
+		app:layout_constraintStart_toStartOf="@+id/login_view"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	<EditText
+		android:id="@+id/editTextTextEmailAddress"
+		android:layout_width="259dp"
+		android:layout_height="49dp"
+		android:layout_marginTop="40dp"
+		android:autofillHints=""
+		android:ems="10"
+		android:inputType="textEmailAddress"
+		android:text="@string/email"
+		android:textAlignment="viewStart"
+		android:textColor="#000000"
+		android:textColorHighlight="#E80909"
+		android:textColorHint="@color/material_dynamic_neutral99"
+		android:textColorLink="@color/ic_launcher_my_perfect_dog_background"
+		app:layout_constraintEnd_toEndOf="@+id/login_view"
+		app:layout_constraintHorizontal_bias="0.497"
+		app:layout_constraintStart_toStartOf="@+id/login_view"
+		app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+	
+	<EditText
+		android:id="@+id/editTextTextPassword"
+		android:layout_width="259dp"
+		android:layout_height="49dp"
+		android:layout_marginTop="44dp"
+		android:autofillHints=""
+		android:ems="10"
+		android:inputType="textPassword"
+		android:text="@string/password"
+		android:textColor="#000000"
+		app:layout_constraintEnd_toEndOf="@+id/login_view"
+		app:layout_constraintHorizontal_bias="0.497"
+		app:layout_constraintStart_toStartOf="@+id/login_view"
+		app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+		tools:ignore="TextContrastCheck" />
+	
+	<ImageView
+		android:id="@+id/iv_login"
+		android:layout_width="366dp"
+		android:layout_height="241dp"
+		android:layout_marginTop="56dp"
+		android:contentDescription="@string/dogName182"
+		app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+		app:layout_constraintHorizontal_bias="0.504"
+		app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+		app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+		app:srcCompat="@drawable/pharaonenhund"
+		tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

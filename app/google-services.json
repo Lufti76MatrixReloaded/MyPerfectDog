@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "263012272281",
+    "project_id": "myperfectdog-80c6e",
+    "storage_bucket": "myperfectdog-80c6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263012272281:android:7317b3f2d6d7991c505008",
+        "android_client_info": {
+          "package_name": "de.syntaxinstitut.myperfectdog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263012272281-7gpmt1me9pktfpg3hsseaom448668cnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo_uKmdOtFxRkciInH8ef7io5QCu_g4mY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263012272281-7gpmt1me9pktfpg3hsseaom448668cnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
