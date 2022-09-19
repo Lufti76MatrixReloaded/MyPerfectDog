@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/cl_login"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<View
+		android:id="@+id/login_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#6E6EF3"
+		android:textAlignment="gravity"
+		android:textDirection="inherit"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="1.0" />
+	
+	<TextView
+		android:id="@+id/tv_login"
+		android:layout_width="161dp"
+		android:layout_height="70dp"
+		android:layout_marginTop="16dp"
+		android:backgroundTint="#FFFFFF"
+		android:fontFamily="sans-serif-black"
+		android:text="@string/login"
+		android:textAlignment="center"
+		android:textColor="@color/black"
+		android:textSize="48sp"
+		android:textStyle="bold|italic"
+		app:autoSizeTextType="none"
+		app:layout_constraintEnd_toEndOf="@+id/login_view"
+		app:layout_constraintHorizontal_bias="0.498"
+		app:layout_constraintStart_toStartOf="@+id/login_view"
+		app:layout_constraintTop_toTopOf="parent" />
+	
+	<EditText
+		android:id="@+id/editTextTextEmailAddress"
+		android:layout_width="260dp"
+		android:layout_height="60dp"
+		android:layout_marginTop="40dp"
+		android:autofillHints=""
+		android:backgroundTint="#FFFFFF"
+		android:ems="10"
+		android:fontFamily="sans-serif-black"
+		android:hint="@string/fui_email_hint"
+		android:inputType="textEmailAddress"
+		android:text="@string/email"
+		android:textColor="@color/black"
+		android:textSize="24sp"
+		android:textStyle="bold|italic"
+		app:layout_constraintEnd_toEndOf="@+id/login_view"
+		app:layout_constraintHorizontal_bias="0.497"
+		app:layout_constraintStart_toStartOf="@+id/login_view"
+		app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+	
+	<EditText
+		android:id="@+id/editTextTextPassword"
+		android:layout_width="260dp"
+		android:layout_height="60dp"
+		android:layout_marginTop="44dp"
+		android:autofillHints=""
+		android:backgroundTint="#FFFFFF"
+		android:ems="10"
+		android:fontFamily="sans-serif-black"
+		android:hint="@string/fui_password_hint"
+		android:inputType="textPassword"
+		android:text="@string/password"
+		android:textColor="@color/black"
+		android:textSize="24sp"
+		android:textStyle="bold|italic"
+		app:layout_constraintEnd_toEndOf="@+id/login_view"
+		app:layout_constraintHorizontal_bias="0.497"
+		app:layout_constraintStart_toStartOf="@+id/login_view"
+		app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+		tools:ignore="TextContrastCheck" />
+	
+	<ImageView
+		android:id="@+id/iv_login"
+		android:layout_width="335dp"
+		android:layout_height="222dp"
+		android:layout_marginBottom="28dp"
+		android:contentDescription="@string/dogName61"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@+id/login_btn"
+		app:layout_constraintHorizontal_bias="0.563"
+		app:layout_constraintStart_toStartOf="@+id/cancel_btn_login"
+		app:layout_constraintTop_toBottomOf="@+id/login_btn"
+		app:layout_constraintVertical_bias="1.0"
+		app:srcCompat="@drawable/cane_corso"
+		tools:ignore="ImageContrastCheck" />
+	
+	<Button
+		android:id="@+id/login_btn"
+		android:layout_width="95dp"
+		android:layout_height="48dp"
+		android:layout_marginTop="52dp"
+		android:layout_marginEnd="76dp"
+		android:backgroundTint="#304FFE"
+		android:text="@string/login"
+		android:textAlignment="center"
+		android:textAllCaps="true"
+		android:textSize="24sp"
+		android:textStyle="bold|italic"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+		tools:ignore="DuplicateSpeakableTextCheck" />
+	
+	<Button
+		android:id="@+id/cancel_btn_login"
+		android:layout_width="95dp"
+		android:layout_height="48dp"
+		android:layout_marginTop="52dp"
+		android:backgroundTint="@color/white"
+		android:fontFamily="sans-serif-black"
+		android:text="@string/cancel"
+		android:textAlignment="center"
+		android:textAllCaps="true"
+		android:textColor="#3F51B5"
+		android:textSize="24sp"
+		android:textStyle="bold|italic"
+		app:layout_constraintEnd_toStartOf="@+id/login_btn"
+		app:layout_constraintHorizontal_bias="0.173"
+		app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+		app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+		tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

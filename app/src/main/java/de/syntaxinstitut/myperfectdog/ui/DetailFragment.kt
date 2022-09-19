@@ -1,55 +1,62 @@
 package de.syntaxinstitut.myperfectdog.ui
 
 import android.os.Bundle
+import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import com.example.apicalls.R
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import de.syntaxinstitut.myperfectdog.MainViewModel
+import de.syntaxinstitut.myperfectdog.R
+import de.syntaxinstitut.myperfectdog.databinding.Fragment06DogsDetailBinding
 import de.syntaxinstitut.myperfectdog.databinding.FragmentDetailBinding
 
 /**
  * Fragment Detail
  */
-class DetailFragment : Fragment(R.layout.fragment_detail) {
+class DetailFragment : Fragment() {
 
-    /* -------------------- Klassen Variablen -------------------- */
+	private lateinit var binding: FragmentDetailBinding
+	private val viewModel: MainViewModel by activityViewModels()
 
-    /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
-    private lateinit var binding: FragmentDetailBinding
-}
+	private var dogsId: Long = 0
 
-/** Das ViewModel zu diesem Fragment */
-private val viewModel: ViewModel()
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
 
-/* -------------------- Lifecycle -------------------- */
-/**
- * Lifecycle Methode wenn das View erstellt wird
- *
- * @param inflater                Layout Inflater
- * @param container               View Gruppe
- * @param savedInstanceState      Eventuelle saveStates
- */
+		arguments?.let {
+			dogsId = it.getLong("id")
+		}
+	}
 
-override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
+	override fun onCreateView(
+		inflater: LayoutInflater,
+		container: ViewGroup?,
+		savedInstanceState: Bundle?,
+	): View? {
 
-}
+		binding = DataBindingUtil.inflate(
+			inflater, R.layout.fragment_06_dogs_detail, container, false
+		)
+		return binding.root
+	}
 
-override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?,
-): View? {
+	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-    binding = DataBindingUtil.inflate(
-        inflater, R.layout.fragment_detail, container, false
-    )
-    return binding.root
-}
-override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+		viewModel.dogsList.observe(
+			viewLifecycleOwner,
+			Observer { list ->
+				var dogsList = list.find { it.id == dogsId }
 
+				if (dogsId != null) {
+					binding.detailImage.setImageResource(dogsId.javaClass)
+					binding.detailText.dogsDetailText = getString(dogsList.stringResource)
+				}
+			}
+		)
+	}
 }
 

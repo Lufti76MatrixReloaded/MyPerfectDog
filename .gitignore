@@ -29,3 +29,10 @@ local.properties
 /app/src/androidTest/
 /app/proguard-rules.pro
 /app/release/
+/app/src/main/res/xml/variablefont/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints
+/app/src/main/res/xml/font/MaterialIcons-Regular.codepoints
+/app/src/main/res/xml/font/MaterialIcons-Regular.ttf
+/app/src/main/res/xml/font/MaterialIconsOutlined-Regular.codepoints
+/app/src/main/res/xml/font/README.md
+/app/src/main/res/xml/font/
+/app/src/main/res/xml/variablefont/

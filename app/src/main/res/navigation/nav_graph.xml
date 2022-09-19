@@ -1,43 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	tools:context=".MainActivity"
-	app:startDestination="@id/fragmentHome">
-	
-	<androidx.fragment.app.FragmentContainerView
-		android:id="@+id/nav_host_fragment"
-		android:name="androidx.navigation.fragment.NavHostFragment"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		app:defaultNavHost="true"
-		app:navGraph="@navigation/nav_graph" />
-	
-	<activity
-		android:id="@+id/mainActivity"
-		android:name="de.syntaxinstitut.myperfectdog.MainActivity"
-		android:label="MainActivity" />
-	
-	<fragment
-		android:id="@+id/signUpFragment"
-		android:name="de.syntaxinstitut.myperfectdog.ui.authentication.SignUpFragment"
-		android:label="SignUpFragment" />
-	
-	<fragment
-		android:id="@+id/detailFragment"
-		android:name="de.syntaxinstitut.myperfectdog.ui.DetailFragment"
-		android:label="DetailFragment" />
-	
-	<fragment
-		android:id="@+id/fragmentHome"
-		android:name="de.syntaxinstitut.myperfectdog.ui.FragmentHome"
-		android:label="FragmentHome" />
-	
-	<androidx.fragment.app.FragmentContainerView/>
-	<navigation android:id="@+id/navigation"
-		app:startDestination="@id/fragmentHome">
+<navigation android:id="@+id/navigation"
+	app:startDestination="@id/fragmentHome"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
 		<fragment
 			android:id="@+id/fragmentHome"
 			android:name="de.syntaxinstitut.myperfectdog.ui.FragmentHome"
@@ -80,4 +45,3 @@
 			android:name="de.syntaxinstitut.myperfectdog.MainActivity"
 			android:label="MainActivity" />
 	</navigation>
-</androidx.constraintlayout.widget.ConstraintLayout>

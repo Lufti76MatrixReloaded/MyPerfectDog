@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+	
+	<data>
+	
+	</data>
+	
+	<androidx.constraintlayout.widget.ConstraintLayout
+		
+		android:id="@+id/coordinatian_home"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbarStyle="outsideOverlay"
+		android:background="@color/ic_launcher_my_perfect_dog_background">
+		
+		
+		<ScrollView
+			android:id="@+id/sc_activity_main"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#6E6EF3"
+			android:contentDescription="@string/default_web_client_id"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="1.0">
+			
+			<TextView
+				android:id="@+id/titel_text_View"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="10dp"
+				android:elegantTextHeight="true"
+				android:fontFamily="serif"
+				android:foregroundGravity="center_vertical|center|center_horizontal"
+				android:scrollbars="horizontal"
+				android:text="@string/my_perfect_dog"
+				android:textAlignment="center"
+				android:textColor="@color/material_dynamic_neutral99"
+				android:textIsSelectable="false"
+				android:textSize="36sp"
+				android:textStyle="bold"
+				tools:text="@string/app_name" />
+		</ScrollView>
+		
+		<ImageView
+			android:id="@+id/iv_activity_main"
+			android:layout_width="378dp"
+			android:layout_height="254dp"
+			android:layout_marginStart="5dp"
+			android:layout_marginTop="100dp"
+			android:layout_marginEnd="5dp"
+			android:contentDescription="@string/dogName35"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:srcCompat="@drawable/belgischer_sch_ferhund__malinois_" />
+		
+		<MultiAutoCompleteTextView
+			android:id="@+id/tv_Einleitung"
+			android:layout_width="372dp"
+			android:layout_height="258dp"
+			android:layout_marginTop="4dp"
+			android:fontFamily="serif"
+			android:labelFor="@id/tv_Einleitung"
+			android:text="@string/die_vielfalt_der_hunderassen_ist_gross_jede_einzelne_zeichnet_sich_durch_ihr_besonderes_aussehen_einen_individuellen_charakter_und_spezielle_beduerfnisse_aus_bevor_sie_in_die_riesige_welt_der_hunderassen_eintauchen_erfahren_sie_hier_mehr_ueber_ihre_besonderheiten_und_entstehung"
+			android:textAlignment="center"
+			android:textColor="@color/material_dynamic_neutral99"
+			android:textSize="20sp"
+			android:typeface="normal"
+			app:layout_constraintEnd_toEndOf="@+id/iv_activity_main"
+			app:layout_constraintHorizontal_bias="0.333"
+			app:layout_constraintStart_toStartOf="@+id/iv_activity_main"
+			app:layout_constraintTop_toBottomOf="@+id/iv_activity_main"
+			tools:ignore="DuplicateSpeakableTextCheck" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+	
+		
+
+
+

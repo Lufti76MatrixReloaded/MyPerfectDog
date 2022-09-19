@@ -14,34 +14,19 @@
         android:id="@+id/Detail_Fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/ic_launcher_my_perfect_dog_background"
+        android:background="#6E6EF3"
         android:tag="layout/fragment_detail">
     
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/materialToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/ic_launcher_my_perfect_dog_background"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
+            android:layout_width="396dp"
+            android:layout_height="61dp"
+            android:background="#6E6EF3"
+            android:minHeight="?android:attr/actionBarSize"
+            android:theme="@style/Theme.AndroidAppTemplate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    
-        <ImageView
-            android:id="@+id/ivDogs_Detail"
-            android:layout_width="397dp"
-            android:layout_height="265dp"
-            android:layout_marginTop="4dp"
-            android:background="@color/ic_launcher_my_perfect_dog_background"
-            android:contentDescription="@string/dogName81"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
-            app:layout_constraintStart_toStartOf="@+id/materialToolbar"
-            app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
-            app:srcCompat="@drawable/deutscher_sch_ferhund"
-            tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@drawable/deutscher_sch_ferhund" />
     
         <TextView
             android:id="@+id/tvDogName"
@@ -56,13 +41,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/dogName81" />
+            tools:text="@string/dogName83" />
+    
+        <ImageView
+            android:id="@+id/ivDogs_Detail"
+            android:layout_width="397dp"
+            android:layout_height="265dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/ic_launcher_my_perfect_dog_background"
+            android:contentDescription="@string/dogName83"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
+            app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+            app:srcCompat="@drawable/deutscher_sch_ferhund"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@drawable/deutscher_sch_ferhund" />
     
         <TextView
             android:id="@+id/tvHistory_Detail"
             android:layout_width="392dp"
             android:layout_height="574dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:text="@string/tvhistory_detail"
             android:textAlignment="textStart"
             android:textAllCaps="false"
@@ -74,23 +74,6 @@
             app:layout_constraintHorizontal_bias="0.571"
             app:layout_constraintStart_toStartOf="@+id/ivDogs_Detail"
             app:layout_constraintTop_toBottomOf="@+id/ivDogs_Detail" />
-    
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/back_Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:contentDescription="back_btn"
-            android:focusable="true"
-            app:backgroundTint="@color/material_dynamic_neutral99"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/tvHistory_Detail"
-            app:layout_constraintHorizontal_bias="0.954"
-            app:layout_constraintStart_toStartOf="@+id/tvHistory_Detail"
-            app:layout_constraintTop_toBottomOf="@+id/ivDogs_Detail"
-            app:layout_constraintVertical_bias="0.953"
-            app:srcCompat="@android:drawable/ic_menu_revert"
-            tools:ignore="HardcodedText,SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

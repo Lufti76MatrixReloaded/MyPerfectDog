@@ -1,8 +1,9 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- APP NAME -->
     <string name="app_name" translatable="false">My Perfect Dog</string>
 
     <!-- DOG NAMES A-->
+    <string name="dogs_A" translatable="false">DOGS A</string>
     <string name="dogName1" translatable="false">AFFENPINSCHER</string>
     <string name="dogName2" translatable="false">AFGHANISCHER WINDHUND</string>
     <string name="dogName3" translatable="false">AIREDALE TERRIER</string>
@@ -22,301 +23,328 @@
     <string name="dogName17" translatable="false">ANATOLISCHER HIRTENHUND</string>
     <string name="dogName18" translatable="false">APPENZELLER SENNENHUND</string>
     <string name="dogName19" translatable="false">AUSTRALIAN CATTLE</string>
-    <string name="dogName20" translatable="false">AUSTRALIAN KELPIE</string>
-    <string name="dogName21" translatable="false">AUSTRALIAN SHEPHERD</string>
-    <string name="dogName22" translatable="false">AUSTRALIAN STUMPY TAIL CATTLE DOG</string>
-    <string name="dogName23" translatable="false">AUSTRALIAN TERRIER</string>
-    <string name="dogName24" translatable="false">AZAWAKH</string>
+    <string name="dogName22" translatable="false">AUSTRALIAN KELPIE</string>
+    <string name="dogName23" translatable="false">AUSTRALIAN SHEPHERD</string>
+    <string name="dogName24" translatable="false">AUSTRALIAN STUMPY TAIL CATTLE DOG</string>
+    <string name="dogName25" translatable="false">AUSTRALIAN TERRIER</string>
+    <string name="dogName26" translatable="false">AZAWAKH</string>
 
     <!-- DOG NAMES B-->
-    <string name="dogName25" translatable="false">BANDOG BULLMASTIFF</string>
-    <string name="dogName26" translatable="false">BARBET</string>
-    <string name="dogName27" translatable="false">BARSOI</string>
-    <string name="dogName28" translatable="false">BASENJI</string>
-    <string name="dogName29" translatable="false">BASSET HOUND</string>
-    <string name="dogName30" translatable="false">BAYRISCHER GEBIRGSSCHWEISSHUND</string>
-    <string name="dogName31" translatable="false">BEAGLE</string>
-    <string name="dogName32" translatable="false">BEARDED COLLIE</string>
-    <string name="dogName33" translatable="false">BEAUCERON</string>
-    <string name="dogName34" translatable="false">BEDLINGTON TERRIER</string>
-    <string name="dogName35" translatable="false">BELGISCHER SCHÄFERHUND (MALINOIS)</string>
-    <string name="dogName36" translatable="false">BERGAMASKER HIRTENHUND</string>
-    <string name="dogName37" translatable="false">BERGER BLANC SUISSE</string>
-    <string name="dogName38" translatable="false">BERGER PICARD</string>
-    <string name="dogName39" translatable="false">BERNEDOODLE</string>
-    <string name="dogName40" translatable="false">BERNER SENNENHUND</string>
-    <string name="dogName41" translatable="false">BERNHARDINER (ST.BERNHARDSHUND)</string>
-    <string name="dogName42" translatable="false">BISCHON FRISÉ</string>
-    <string name="dogName43" translatable="false">BLACK AND TAN COONHOUND</string>
-    <string name="dogName44" translatable="false">BLOODHOUND</string>
-    <string name="dogName45" translatable="false">BOBTAIL (OLD ENGLISH SHEEPDOG)</string>
-    <string name="dogName46" translatable="false">BOERBOEL</string>
-    <string name="dogName47" translatable="false">BOLOGNESER</string>
-    <string name="dogName48" translatable="false">BOLONKA ZWETNA</string>
-    <string name="dogName49" translatable="false">BORDEUX DOGGE</string>
-    <string name="dogName50" translatable="false">BORDER COLLIE</string>
-    <string name="dogName51" translatable="false">BORDER TERRIER</string>
-    <string name="dogName52" translatable="false">BOSTON TERRIER</string>
-    <string name="dogName53" translatable="false">BRIARD</string>
-    <string name="dogName54" translatable="false">BROHOLMER</string>
-    <string name="dogName55" translatable="false">BULLMASTIFF</string>
-    <string name="dogName56" translatable="false">BULLTERRIER</string>
+    <string name="dogs_B" translatable="false">DOGS B</string>
+    <string name="dogName27" translatable="false">BANDOG BULLMASTIFF</string>
+    <string name="dogName28" translatable="false">BARBET</string>
+    <string name="dogName29" translatable="false">BARSOI</string>
+    <string name="dogName30" translatable="false">BASENJI</string>
+    <string name="dogName31" translatable="false">BASSET HOUND</string>
+    <string name="dogName32" translatable="false">BAYRISCHER GEBIRGSSCHWEISSHUND</string>
+    <string name="dogName33" translatable="false">BEAGLE</string>
+    <string name="dogName34" translatable="false">BEARDED COLLIE</string>
+    <string name="dogName35" translatable="false">BEAUCERON</string>
+    <string name="dogName36" translatable="false">BEDLINGTON TERRIER</string>
+    <string name="dogName37" translatable="false">BELGISCHER SCHÄFERHUND (MALINOIS)</string>
+    <string name="dogName38" translatable="false">BERGAMASKER HIRTENHUND</string>
+    <string name="dogName39" translatable="false">BERGER BLANC SUISSE</string>
+    <string name="dogName40" translatable="false">BERGER PICARD</string>
+    <string name="dogName41" translatable="false">BERNEDOODLE</string>
+    <string name="dogName42" translatable="false">BERNER SENNENHUND</string>
+    <string name="dogName43" translatable="false">BERNHARDINER (ST.BERNHARDSHUND)</string>
+    <string name="dogName44" translatable="false">BISCHON FRISÉ</string>
+    <string name="dogName45" translatable="false">BLACK AND TAN COONHOUND</string>
+    <string name="dogName46" translatable="false">BLOODHOUND</string>
+    <string name="dogName47" translatable="false">BOBTAIL (OLD ENGLISH SHEEPDOG)</string>
+    <string name="dogName48" translatable="false">BOERBOEL</string>
+    <string name="dogName49" translatable="false">BOLOGNESER</string>
+    <string name="dogName50" translatable="false">BOLONKA ZWETNA</string>
+    <string name="dogName51" translatable="false">BORDEUX DOGGE</string>
+    <string name="dogName52" translatable="false">BORDER COLLIE</string>
+    <string name="dogName53" translatable="false">BORDER TERRIER</string>
+    <string name="dogName54" translatable="false">BOSTON TERRIER</string>
+    <string name="dogName55" translatable="false">BRIARD</string>
+    <string name="dogName56" translatable="false">BROHOLMER</string>
+    <string name="dogName57" translatable="false">BULLMASTIFF</string>
+    <string name="dogName58" translatable="false">BULLTERRIER</string>
 
     <!-- DOG NAMES C-->
-    <string name="dogName57" translatable="false">CA DE BOU</string>
-    <string name="dogName58" translatable="false">CAIRN TERRIER</string>
-    <string name="dogName59" translatable="false">CANE CORSO</string>
-    <string name="dogName60" translatable="false">KAVALIER KING CHARLES SPANIEL</string>
-    <string name="dogName61" translatable="false">CAVAPOO</string>
-    <string name="dogName62" translatable="false">CHESAPEAKE BAY RETRIEVER</string>
-    <string name="dogName63" translatable="false">CHIHUAHUA</string>
-    <string name="dogName64" translatable="false">CHINESISCHER SCHOPFHUND</string>
-    <string name="dogName65" translatable="false">CHOW CHOW</string>
-    <string name="dogName66" translatable="false">CIOBÁNESC ROMÁNESC MIORITIC</string>
-    <string name="dogName67" translatable="false">CLUMBER SPANIEL</string>
-    <string name="dogName68" translatable="false">COCKAPOO</string>
-    <string name="dogName69" translatable="false">COLLIE (KURZHAAR)</string>
-    <string name="dogName70" translatable="false">COLLIE (LANGHAAR)</string>
+    <string name="dogs_C" translatable="false">DOGS C</string>
+    <string name="dogName59" translatable="false">CA DE BOU</string>
+    <string name="dogName60" translatable="false">CAIRN TERRIER</string>
+    <string name="dogName61" translatable="false">CANE CORSO</string>
+    <string name="dogName62" translatable="false">KAVALIER KING CHARLES SPANIEL</string>
+    <string name="dogName63" translatable="false">CAVAPOO</string>
+    <string name="dogName64" translatable="false">CHESAPEAKE BAY RETRIEVER</string>
+    <string name="dogName65" translatable="false">CHIHUAHUA</string>
+    <string name="dogName66" translatable="false">CHINESISCHER SCHOPFHUND</string>
+    <string name="dogName67" translatable="false">CHOW CHOW</string>
+    <string name="dogName68" translatable="false">CIOBÁNESC ROMÁNESC MIORITIC</string>
+    <string name="dogName69" translatable="false">CLUMBER SPANIEL</string>
+    <string name="dogName70" translatable="false">COCKAPOO</string>
     <string name="dogName71" translatable="false">COTON DE TULÉAR</string>
-    <string name="dogName72" translatable="false">CURLY COATED RETRIEVER</string>
+    <string name="dogName72" translatable="false">COLLIE (KURZHAAR)</string>
+    <string name="dogName73" translatable="false">CURLY COATED RETRIEVER</string>
 
     <!-- DOG NAMES D-->
-    <string name="dogName73" translatable="false">DACKEL</string>
-    <string name="dogName74" translatable="false">DALMATINER</string>
-    <string name="dogName75" translatable="false">DOERHOUND</string>
-    <string name="dogName76" translatable="false">DEUTSCHE DOGGE</string>
-    <string name="dogName77" translatable="false">DEUTSCHER BOXER</string>
-    <string name="dogName78" translatable="false">DEUTSCHER DRAHTHAAR</string>
-    <string name="dogName79" translatable="false">DEUTSCHER KURZHAAR</string>
-    <string name="dogName80" translatable="false">DEUTSCHER PINSCHER</string>
-    <string name="dogName81" translatable="false">DEUTSCHER SCHÄFERHUND</string>
-    <string name="dogName82" translatable="false">DEUTSCHER WACHTELHUND</string>
-    <string name="dogName83" translatable="false">DOBERMANN</string>
-    <string name="dogName84" translatable="false">DOGO ARGENTINO</string>
-    <string name="dogName85" translatable="false">DRAHTHAAR FOX TERRIER</string>
+    <string name="dogs_D" translatable="false">DOGS D</string>
+    <string name="dogName74" translatable="false">DACKEL</string>
+    <string name="dogName75" translatable="false">DALMATINER</string>
+    <string name="dogName76" translatable="false">DEERHOUND</string>
+    <string name="dogName77" translatable="false">DEUTSCHE DOGGE</string>
+    <string name="dogName78" translatable="false">DEUTSCHER BOXER</string>
+    <string name="dogName79" translatable="false">DEUTSCHER DRAHTHAAR</string>
+    <string name="dogName80" translatable="false">DEUTSCHER KURZHAAR</string>
+    <string name="dogName81" translatable="false">DEUTSCHER LANGHAAR</string>
+    <string name="dogName82" translatable="false">DEUTSCHER PINSCHER</string>
+    <string name="dogName83" translatable="false">DEUTSCHER SCHÄFERHUND</string>
+    <string name="dogName84" translatable="false">DEUTSCHER WACHTELHUND</string>
+    <string name="dogName85" translatable="false">DOBERMANN</string>
+    <string name="dogName86" translatable="false">DOGO ARGENTINO</string>
+    <string name="dogName87" translatable="false">DRAHTHAAR FOX TERRIER</string>
 
-    <!-- DOG NAMES E-->
-    <string name="dogName86" translatable="false">ELO</string>
-    <string name="dogName87" translatable="false">ENGLISCHE BULLDOGGE</string>
-    <string name="dogName88" translatable="false">ENGLISH COCKER SPANIEL</string>
-    <string name="dogName89" translatable="false">ENGLISH FOXHOUND</string>
-    <string name="dogName90" translatable="false">ENGLISH MASTIFF</string>
-    <string name="dogName91" translatable="false">ENGLISH POINTER</string>
-    <string name="dogName92" translatable="false">ENGLISH SETTER</string>
-    <string name="dogName93" translatable="false">ENGLISH SPRINGER SPANIEL</string>
-    <string name="dogName94" translatable="false">ENTLEBUCHER SENNENHUND</string>
-    <string name="dogName95" translatable="false">EURASIER</string>
-
-    <!-- DOG NAMES É-->
-    <string name="dogName96" translatable="false">ÉPAGNEUL BRETON</string>
-    <string name="dogName97" translatable="false">ÉPAGNEUL FRANCAIS</string>
-    <string name="dogName98" translatable="false">ÉPAGNEUL PICARD</string>
+    <!-- DOG NAMES E_É-->
+    <string name="dogs_E_É" translatable="false">DOGS E/É</string>
+    <string name="dogName88" translatable="false">ELO</string>
+    <string name="dogName89" translatable="false">ENGLISCHE BULLDOGGE</string>
+    <string name="dogName90" translatable="false">ENGLISH COCKER SPANIEL</string>
+    <string name="dogName91" translatable="false">ENGLISH FOXHOUND</string>
+    <string name="dogName92" translatable="false">ENGLISH MASTIFF</string>
+    <string name="dogName93" translatable="false">ENGLISH POINTER</string>
+    <string name="dogName94" translatable="false">ENGLISH SETTER</string>
+    <string name="dogName95" translatable="false">ENGLISH SPRINGER SPANIEL</string>
+    <string name="dogName96" translatable="false">ENTLEBUCHER SENNENHUND</string>
+    <string name="dogName97" translatable="false">EURASIER</string>
+    <string name="dogName98" translatable="false">ÉPAGNEUL BRETON</string>
+    <string name="dogName99" translatable="false">ÉPAGNEUL FRANCAIS</string>
+    <string name="dogName100" translatable="false">ÉPAGNEUL PICARD</string>
 
     <!-- DOG NAMES F-->
-    <string name="dogName99" translatable="false">FIELD SPANIEL</string>
-    <string name="dogName100" translatable="false">FILA BRASILERIO</string>
-    <string name="dogName101" translatable="false">FINNEN SPITZ</string>
-    <string name="dogName102" translatable="false">FINNISCHER LAPPHUND</string>
-    <string name="dogName103" translatable="false">FLAT COATED RETRIEVER</string>
-    <string name="dogName104" translatable="false">FRANZÖSISCHE BULLDOGGE</string>
+    <string name="dogs_F" translatable="false">DOGS F</string>
+    <string name="dogName101" translatable="false">FIELD SPANIEL</string>
+    <string name="dogName102" translatable="false">FILA BRASILERIO</string>
+    <string name="dogName103" translatable="false">FINNEN SPITZ</string>
+    <string name="dogName104" translatable="false">FINNISCHER LAPPHUND</string>
+    <string name="dogName105" translatable="false">FLAT COATED RETRIEVER</string>
+    <string name="dogName106" translatable="false">FRANZÖSISCHE BULLDOGGE</string>
 
     <!-- DOG NAMES G-->
-    <string name="dogName105" translatable="false">GALGO ESPANOL</string>
-    <string name="dogName106" translatable="false">GLATTHAAR FOX TERRIER</string>
-    <string name="dogName107" translatable="false">GOLDEN DOODLE</string>
-    <string name="dogName108" translatable="false">GOLDEN RETRIEVER</string>
-    <string name="dogName109" translatable="false">GORDON SETTER</string>
-    <string name="dogName110" translatable="false">GRAND GRIFFIN VENDEEN</string>
-    <string name="dogName111" translatable="false">GREYHOUND</string>
-    <string name="dogName112" translatable="false">GRÖNLANDHUND</string>
-    <string name="dogName113" translatable="false">GROSSER MÜNSTERLÄNDER</string>
-    <string name="dogName114" translatable="false">GROSSER SCHWEIZER SENNENHUND</string>
-    <string name="dogName115" translatable="false">GROßSPITZ</string>
+    <string name="dogs_G" translatable="false">DOGS G</string>
+    <string name="dogName107" translatable="false">GALGO ESPANOL</string>
+    <string name="dogName108" translatable="false">GLATTHAAR FOX TERRIER</string>
+    <string name="dogName109" translatable="false">GOLDEN DOODLE</string>
+    <string name="dogName110" translatable="false">GOLDEN RETRIEVER</string>
+    <string name="dogName111" translatable="false">GORDON SETTER</string>
+    <string name="dogName112" translatable="false">GRAND GRIFFIN VENDEÉN</string>
+    <string name="dogName113" translatable="false">GREYHOUND</string>
+    <string name="dogName114" translatable="false">GRÖNLANDHUND</string>
+    <string name="dogName115" translatable="false">GROSSER MÜNSTERLÄNDER</string>
+    <string name="dogName116" translatable="false">GROSSER SCHWEIZER SENNENHUND</string>
+    <string name="dogName117" translatable="false">GROßSPITZ</string>
 
     <!-- DOG NAMES H-->
-    <string name="dogName116" translatable="false">HARZER FUCHS</string>
-    <string name="dogName117" translatable="false">HAVANESER</string>
-    <string name="dogName118" translatable="false">HOKKAIDO</string>
-    <string name="dogName119" translatable="false">HOLLÄNDISCHER SCHÄFERHUND</string>
-    <string name="dogName120" translatable="false">HOVAWART</string>
+    <string name="dogName118" translatable="false">HARZER FUCHS</string>
+    <string name="dogName119" translatable="false">HAVANESER</string>
+    <string name="dogName120" translatable="false">HOKKAIDO</string>
+    <string name="dogName121" translatable="false">HOLLÄNDISCHER SCHÄFERHUND</string>
+    <string name="dogName122" translatable="false">HOVAWART</string>
 
     <!-- DOG NAMES I-->
-    <string name="dogName121" translatable="false">IRISCHER WOLFSHUND</string>
-    <string name="dogName122" translatable="false">IRISH SETTER</string>
-    <string name="dogName123" translatable="false">IRISH SOFT COATED WHEATEN TERRIER</string>
-    <string name="dogName124" translatable="false">IRISH TERRIER</string>
-    <string name="dogName125" translatable="false">IRISH WATER SPANIEL</string>
-    <string name="dogName126" translatable="false">ISLANDHUND</string>
-    <string name="dogName127" translatable="false">ITALIENISCHER WINDHUND (ITALIAN GREYHOUND)</string>
+    <string name="dogs_I" translatable="false">DOGS I</string>
+    <string name="dogName123" translatable="false">IRISCHER WOLFSHUND</string>
+    <string name="dogName124" translatable="false">IRISH SETTER</string>
+    <string name="dogName125" translatable="false">IRISH SOFT COATED WHEATEN TERRIER</string>
+    <string name="dogName126" translatable="false">IRISH TERRIER</string>
+    <string name="dogName127" translatable="false">IRISH WATER SPANIEL</string>
+    <string name="dogName128" translatable="false">ISLANDHUND</string>
+    <string name="dogName129" translatable="false"> ITALIAN GREYHOUND(ITALIENISCHER WINDHUND)</string>
 
     <!-- DOG NAMES J-->
-    <string name="dogName128" translatable="false">JACK RUSSEL TERRIER</string>
-    <string name="dogName129" translatable="false">JÄMTHUND</string>
-    <string name="dogName130" translatable="false">JAPAN CHIN</string>
-    <string name="dogName131" translatable="false">JAPAN SPITZ</string>
+    <string name="dogs_J" translatable="false">DOGS J</string>
+    <string name="dogName130" translatable="false">JACK RUSSEL TERRIER</string>
+    <string name="dogName131" translatable="false">JÄMTHUND</string>
+    <string name="dogName132" translatable="false">JAPAN CHIN</string>
+    <string name="dogName133" translatable="false">JAPAN SPITZ</string>
 
     <!-- DOG NAMES K-->
-    <string name="dogName132" translatable="false">KAI KEN</string>
-    <string name="dogName133" translatable="false">KANAAN</string>
-    <string name="dogName134" translatable="false">KANGAL</string>
-    <string name="dogName135" translatable="false">KARELISCHER BÄRENHUND</string>
-    <string name="dogName136" translatable="false">KATALANISCHER SCHÄFERHUND</string>
-    <string name="dogName137" translatable="false">KAUKASISCHER OWTSCHARKA</string>
-    <string name="dogName138" translatable="false">KISHU KEN</string>
-    <string name="dogName139" translatable="false">KOMMONDOR</string>
-    <string name="dogName140" translatable="false">KONTINENTALER ZWERGSPANIEL PAPILLION</string>
-    <string name="dogName141" translatable="false">KOOIKERHONDJE</string>
-    <string name="dogName142" translatable="false">KOREA JINDO DOG</string>
-    <string name="dogName143" translatable="false">KROATISCHER SCHÄFERHUND</string>
-    <string name="dogName144" translatable="false">KROMFOHRLÄNDER GLATTHAAR</string>
-    <string name="dogName145" translatable="false">KUVASZ</string>
+    <string name="dogs_K" translatable="false">DOGS K</string>
+    <string name="dogName134" translatable="false">KAI KEN</string>
+    <string name="dogName135" translatable="false">KANAAN</string>
+    <string name="dogName136" translatable="false">KANGAL</string>
+    <string name="dogName137" translatable="false">KARELISCHER BÄRENHUND</string>
+    <string name="dogName138" translatable="false">KATALANISCHER SCHÄFERHUND</string>
+    <string name="dogName139" translatable="false">KAUKASISCHER OWTSCHARKA</string>
+    <string name="dogName140" translatable="false">KISHU KEN</string>
+    <string name="dogName141" translatable="false">KOMMONDOR</string>
+    <string name="dogName142" translatable="false">KONTINENTALER ZWERGSPANIEL PAPILLION</string>
+    <string name="dogName143" translatable="false">KLEINER MÜNSTERLÄNDER</string>
+    <string name="dogName144" translatable="false">KOOIKERHONDJE</string>
+    <string name="dogName145" translatable="false">KOREA JINDO DOG</string>
+    <string name="dogName146" translatable="false">KROATISCHER SCHÄFERHUND</string>
+    <string name="dogName147" translatable="false">KROMFOHRLÄNDER GLATTHAAR</string>
+    <string name="dogName148" translatable="false">KUVASZ</string>
 
     <!-- DOG NAMES L-->
-    <string name="dogName146" translatable="false">LABRADOODLE</string>
-    <string name="dogName147" translatable="false">LABRADOR RETRIEVER</string>
-    <string name="dogName148" translatable="false">LAGOTTO ROMAGNOLO </string>
-    <string name="dogName149" translatable="false">LAKELAND TERRIER</string>
-    <string name="dogName150" translatable="false">LANDSEER</string>
-    <string name="dogName151" translatable="false">LAPPLÄNDISCHER RENTIERHUND</string>
-    <string name="dogName152" translatable="false">LEONBERGER</string>
-    <string name="dogName153" translatable="false">LHASA APSO</string>
-    <string name="dogName154" translatable="false">LOUISIANA CATAHOULA LEOPARD</string>
-    <string name="dogName155" translatable="false">LÖWCHEN</string>
+    <string name="dogs_L" translatable="false">DOGS L</string>
+    <string name="dogName149" translatable="false">LÖWCHEN</string>
+    <string name="dogName150" translatable="false">LABRADOODLE</string>
+    <string name="dogName151" translatable="false">LABRADOR RETRIEVER</string>
+    <string name="dogName152" translatable="false">LAGOTTO ROMAGNOLO </string>
+    <string name="dogName153" translatable="false">LAKELAND TERRIER</string>
+    <string name="dogName154" translatable="false">LANDSEER</string>
+    <string name="dogName155" translatable="false">LAPPLÄNDISCHER RENTIERHUND</string>
+    <string name="dogName156" translatable="false">LEONBERGER</string>
+    <string name="dogName157" translatable="false">LHASA APSO</string>
+    <string name="dogName158" translatable="false">LOUISIANA CATAHOULA LEOPARD</string>
 
     <!-- DOG NAMES M-->
-    <string name="dogName156" translatable="false">MÜNSTERLÄNDER (KLEIN)</string>
-    <string name="dogName157" translatable="false">MAGYAR VIZSLA</string>
-    <string name="dogName158" translatable="false">MALTESER</string>
-    <string name="dogName159" translatable="false">MALTIPOO</string>
-    <string name="dogName160" translatable="false">MANCHESTER TERRIER</string>
-    <string name="dogName161" translatable="false">MASTIN ESPANOL (SPANISCHER MASTIFF)</string>
-    <string name="dogName162" translatable="false">MASTINO NAPOLETANO</string>
-    <string name="dogName163" translatable="false">MINIATURE BULL TERRIER</string>
-    <string name="dogName164" translatable="false">MOPS</string>
-    <string name="dogName165" translatable="false">MUDI</string>
+    <string name="dogs_M" translatable="false">DOGS M</string>
+    <string name="dogName159" translatable="false">MAGYAR VIZSLA</string>
+    <string name="dogName160" translatable="false">MALTESER</string>
+    <string name="dogName161" translatable="false">MALTIPOO</string>
+    <string name="dogName162" translatable="false">MANCHESTER TERRIER</string>
+    <string name="dogName163" translatable="false">MASTIN ESPANOL (SPANISCHER MASTIFF)</string>
+    <string name="dogName164" translatable="false">MASTINO NAPOLETANO</string>
+    <string name="dogName165" translatable="false">MINIATURE BULL TERRIER</string>
+    <string name="dogName166" translatable="false">MOPS</string>
+    <string name="dogName167" translatable="false">MUDI</string>
 
     <!-- DOG NAMES N-->
-    <string name="dogName166" translatable="false">NEUFUNDLÄNDER</string>
-    <string name="dogName167" translatable="false">NORFOLK TERRIER</string>
-    <string name="dogName168" translatable="false">NORWEGISCHER BUHUND</string>
-    <string name="dogName169" translatable="false">NORWEGISCHER ELCHHUND (GRAU)</string>
-    <string name="dogName170" translatable="false">NORWEGISCHER ELCHHUND (SCHWARZ)</string>
-    <string name="dogName171" translatable="false">NORWEGISCHER LUNDEHUND</string>
-    <string name="dogName172" translatable="false">NORWICH TERRIER</string>
-    <string name="dogName173" translatable="false">NOVA SCOTIA DUCK TOLLING RETRIEVER</string>
+    <string name="dogs_N" translatable="false">DOGS N</string>
+    <string name="dogName168" translatable="false">NEUFUNDLÄNDER</string>
+    <string name="dogName169" translatable="false">NORFOLK TERRIER</string>
+    <string name="dogName170" translatable="false">NORWEGISCHER BUHUND</string>
+    <string name="dogName171" translatable="false">NORWEGISCHER ELCHHUND (GRAU)</string>
+    <string name="dogName172" translatable="false">NORWEGISCHER ELCHHUND (SCHWARZ)</string>
+    <string name="dogName173" translatable="false">NORWEGISCHER LUNDEHUND</string>
+    <string name="dogName174" translatable="false">NORWICH TERRIER</string>
+    <string name="dogName175" translatable="false">NOVA SCOTIA DUCK TOLLING RETRIEVER</string>
 
     <!-- DOG NAMES O-->
-    <string name="dogName174" translatable="false">OLD ENGLISH BULLDOGGE</string>
-    <string name="dogName175" translatable="false">OSTSIBIRISCHER LAIKA</string>
-    <string name="dogName176" translatable="false">OTTERHOUND</string>
-
-    <!-- DOG NAMES Ö-->
-    <string name="dogName177" translatable="false">ÖSTERREICHISCHER BRACKEN</string>
-    <string name="dogName178" translatable="false">ÖSTERREICHISCHER PINSCHER</string>
+    <string name="dogs_O_Ö" translatable="false">DOGS O/Ö</string>
+    <string name="dogName176" translatable="false">OLD ENGLISH BULLDOGGE</string>
+    <string name="dogName177" translatable="false">OSTSIBIRISCHER LAIKA</string>
+    <string name="dogName178" translatable="false">OTTERHOUND</string>
+    <string name="dogName179" translatable="false">ÖSTERREICHISCHER BRACKEN</string>
+    <string name="dogName180" translatable="false">ÖSTERREICHISCHER PINSCHER</string>
 
     <!-- DOG NAMES P-->
-    <string name="dogName179" translatable="false">PARSON RUSSEL TERRIER</string>
-    <string name="dogName180" translatable="false">PEKINGESE</string>
-    <string name="dogName181" translatable="false">PERUANISCHER NACKTHUND</string>
-    <string name="dogName182" translatable="false">PHARAONENHUND</string>
-    <string name="dogName183" translatable="false">PODENCO ANDALUZ</string>
-    <string name="dogName184" translatable="false">POLNISCHE BRAKE</string>
-    <string name="dogName185" translatable="false">POLNISCHER NIEDERUNGSHÜTEHUND</string>
-    <string name="dogName186" translatable="false">POMSKY</string>
-    <string name="dogName187" translatable="false">PORTUGIESISCHER WASSERHUND</string>
-    <string name="dogName188" translatable="false">PRAGER RATTLER</string>
-    <string name="dogName189" translatable="false">PRESA CANARIO</string>
-    <string name="dogName190" translatable="false">PUDEL</string>
-    <string name="dogName191" translatable="false">PUDEL (KLEIN)</string>
-    <string name="dogName192" translatable="false">PUDELPOINTER</string>
-    <string name="dogName193" translatable="false">PUGGLE</string>
-    <string name="dogName194" translatable="false">PULI</string>
-    <string name="dogName195" translatable="false">PUMI</string>
-    <string name="dogName196" translatable="false">PYRENAESISCHER BERGHUND (CHIEN DE MONTAGNE DE PYRÉNÉES)</string>
-    <string name="dogName197" translatable="false">PYRENAESISCHER MASTIFF</string>
-    <string name="dogName198" translatable="false">PYRENAESISCHER SCHÄFERHUND (LANGHAAR)</string>
+    <string name="dogs_P" translatable="false">DOGS P</string>
+    <string name="dogName181" translatable="false">PARSON RUSSEL TERRIER</string>
+    <string name="dogName182" translatable="false">PEKINGESE</string>
+    <string name="dogName183" translatable="false">PERUANISCHER NACKTHUND</string>
+    <string name="dogName184" translatable="false">PHARAONENHUND</string>
+    <string name="dogName185" translatable="false">PODENCO ANDALUZ</string>
+    <string name="dogName186" translatable="false">POLNISCHE BRAKE</string>
+    <string name="dogName187" translatable="false">POLNISCHER NIEDERUNGSHÜTEHUND</string>
+    <string name="dogName188" translatable="false">POMSKY</string>
+    <string name="dogName189" translatable="false">PORTUGIESISCHER WASSERHUND</string>
+    <string name="dogName190" translatable="false">PRAGER RATTLER</string>
+    <string name="dogName191" translatable="false">PRESA CANARIO</string>
+    <string name="dogName192" translatable="false">PUDEL (KLEIN)</string>
+    <string name="dogName193" translatable="false">PUDELPOINTER</string>
+    <string name="dogName194" translatable="false">PUGGLE</string>
+    <string name="dogName195" translatable="false">PULI</string>
+    <string name="dogName196" translatable="false">PUMI</string>
+    <string name="dogName197" translatable="false">PYRENAESISCHER BERGHUND (CHIEN DE MONTAGNE DE PYRÉNÉES)</string>
+    <string name="dogName198" translatable="false">PYRENAESISCHER MASTIFF</string>
+    <string name="dogName199" translatable="false">PYRENAESISCHER SCHÄFERHUND (LANGHAAR)</string>
 
     <!-- DOG NAMES R-->
-    <string name="dogName199" translatable="false">RAEFEIRO DO ALENTEJO</string>
-    <string name="dogName200" translatable="false">RETRO MOPS</string>
-    <string name="dogName201" translatable="false">RHODESIAN RIDGEBACK</string>
-    <string name="dogName202" translatable="false">RIESENSCHNAUZER</string>
-    <string name="dogName203" translatable="false">ROTTWEILER</string>
-    <string name="dogName204" translatable="false">RUSSISCHER SCHWARZER TERRIER</string>
-    <string name="dogName205" translatable="false">RUSSKIY TOY (LANGHAAR)</string>
+    <string name="dogs_R" translatable="false">DOGS R</string>
+    <string name="dogName200" translatable="false">RAEFEIRO DO ALENTEJO</string>
+    <string name="dogName201" translatable="false">RETRO MOPS</string>
+    <string name="dogName202" translatable="false">RHODESIAN RIDGEBACK</string>
+    <string name="dogName203" translatable="false">RIESENSCHNAUZER</string>
+    <string name="dogName204" translatable="false">ROTTWEILER</string>
+    <string name="dogName205" translatable="false">RUSSISCHER SCHWARZER TERRIER</string>
+    <string name="dogName206" translatable="false">RUSSKIY TOY (LANGHAAR)</string>
 
     <!-- DOG NAMES S-->
-    <string name="dogName206" translatable="false">SPITZ (KLEIN UND MITTEL)</string>
-    <string name="dogName207" translatable="false">SAARLOOS WOLFHOUND</string>
-    <string name="dogName208" translatable="false">SALUKI</string>
-    <string name="dogName209" translatable="false">SAMOJEDE</string>
-    <string name="dogName210" translatable="false">SCHAPENDOES</string>
-    <string name="dogName211" translatable="false">SCHIPPERKE</string>
-    <string name="dogName212" translatable="false">SCHNAUZER</string>
-    <string name="dogName213" translatable="false">SCHWEDISCHER WALLHUND</string>
-    <string name="dogName214" translatable="false">SCOTTISH TERRIER</string>
-    <string name="dogName215" translatable="false">SEALYHAM TERRIER</string>
-    <string name="dogName216" translatable="false">SERRA DA ESTRELA BERGHUND</string>
-    <string name="dogName217" translatable="false">SHAR PEI</string>
-    <string name="dogName218" translatable="false">SHETLAND SHEEPDOG</string>
-    <string name="dogName219" translatable="false">SHIBA INU</string>
-    <string name="dogName220" translatable="false">SHIH TZU</string>
-    <string name="dogName221" translatable="false">SHIKOKU</string>
-    <string name="dogName222" translatable="false">SHIRANIAN</string>
-    <string name="dogName223" translatable="false">SIBERIAN HUSKY</string>
-    <string name="dogName224" translatable="false">SLOUGHI</string>
-    <string name="dogName225" translatable="false">SPANISCHER WASSERHUND</string>
-    <string name="dogName226" translatable="false">STAFFORDSHIRE BULL TERRIER</string>
-    <string name="dogName227" translatable="false">SUSSEX SPANIEL</string>
-    <string name="dogName228" translatable="false">SYKE TERRIER</string>
+    <string name="dogs_S" translatable="false">DOGS S</string>
+    <string name="dogName209" translatable="false">SAARLOOS WOLFHOUND</string>
+    <string name="dogName210" translatable="false">SALUKI</string>
+    <string name="dogName211" translatable="false">SAMOJEDE</string>
+    <string name="dogName212" translatable="false">SCHAPENDOES</string>
+    <string name="dogName213" translatable="false">SCHIPPERKE</string>
+    <string name="dogName214" translatable="false">SCHNAUZER</string>
+    <string name="dogName215" translatable="false">SCHWEDISCHER WALLHUND</string>
+    <string name="dogName216" translatable="false">SCOTTISH TERRIER</string>
+    <string name="dogName217" translatable="false">SEALYHAM TERRIER</string>
+    <string name="dogName218" translatable="false">SERRA DA ESTRELA BERGHUND</string>
+    <string name="dogName219" translatable="false">SHAR PEI</string>
+    <string name="dogName220" translatable="false">SHETLAND SHEEPDOG</string>
+    <string name="dogName221" translatable="false">SHIBA INU</string>
+    <string name="dogName222" translatable="false">SHIH TZU</string>
+    <string name="dogName223" translatable="false">SHIKOKU</string>
+    <string name="dogName224" translatable="false">SHIRANIAN</string>
+    <string name="dogName225" translatable="false">SIBERIAN HUSKY</string>
+    <string name="dogName226" translatable="false">SLOUGHI</string>
+    <string name="dogName227" translatable="false">SPANISCHER WASSERHUND</string>
+    <string name="dogName228" translatable="false">STAFFORDSHIRE BULL TERRIER</string>
+    <string name="dogName229" translatable="false">SUSSEX SPANIEL</string>
+    <string name="dogName230" translatable="false">SYKE TERRIER</string>
 
     <!-- DOG NAMES T-->
-    <string name="dogName229" translatable="false">TERVUEREN (BELGISCHER SCHÄFERHUND)</string>
-    <string name="dogName230" translatable="false">THAI RIDGEBACK</string>
-    <string name="dogName231" translatable="false">TIBETANISCHER SPANIEL</string>
-    <string name="dogName232" translatable="false">TIBETANISCHER TERRIER</string>
-    <string name="dogName233" translatable="false">TIBETANISCHER MASTIFF</string>
-    <string name="dogName234" translatable="false">TOSA INU</string>
-    <string name="dogName235" translatable="false">TSCHECHOSLOWAKISCHER WOLFSHUND</string>
+    <string name="dogs_T" translatable="false">DOGS T</string>
+    <string name="dogName231" translatable="false">TERVUEREN (BELGISCHER SCHÄFERHUND)</string>
+    <string name="dogName232" translatable="false">THAI RIDGEBACK</string>
+    <string name="dogName233" translatable="false">TIBETANISCHER SPANIEL</string>
+    <string name="dogName234" translatable="false">TIBETANISCHER TERRIER</string>
+    <string name="dogName235" translatable="false">TIBETANISCHER MASTIFF</string>
+    <string name="dogName236" translatable="false">TOSA INU</string>
+    <string name="dogName237" translatable="false">TSCHECHOSLOWAKISCHER WOLFSHUND</string>
 
     <!-- DOG NAMES W-->
-    <string name="dogName236" translatable="false">WEIMARANER</string>
-    <string name="dogName237" translatable="false">WELSH CORGI CARDIGAN</string>
-    <string name="dogName238" translatable="false">WELSH CORGI PEMBROKE</string>
-    <string name="dogName239" translatable="false">WELSH SPRINGER SPANIEL</string>
-    <string name="dogName240" translatable="false">WELSH TERRIER</string>
-    <string name="dogName241" translatable="false">WEST HIGHLAND WHITE TERRIER</string>
-    <string name="dogName242" translatable="false">WESTSIBIRISCHER LAIKA</string>
-    <string name="dogName243" translatable="false">WOLFSPITZ</string>
+    <string name="dogs_W" translatable="false">DOGS W</string>
+    <string name="dogName238" translatable="false">WEIMARANER</string>
+    <string name="dogName239" translatable="false">WELSH CORGI CARDIGAN</string>
+    <string name="dogName240" translatable="false">WELSH CORGI PEMBROKE</string>
+    <string name="dogName241" translatable="false">WELSH SPRINGER SPANIEL</string>
+    <string name="dogName242" translatable="false">WELSH TERRIER</string>
+    <string name="dogName243" translatable="false">WEST HIGHLAND WHITE TERRIER</string>
+    <string name="dogName244" translatable="false">WESTSIBIRISCHER LAIKA</string>
+    <string name="dogName245" translatable="false">WOLFSPITZ</string>
 
     <!-- DOG NAMES Y-->
-    <string name="dogName244" translatable="false">YORKSHIRE TERRIER</string>
+    <string name="dogs_Y" translatable="false">DOGS Y</string>
+    <string name="dogName246" translatable="false">YORKSHIRE TERRIER</string>
 
     <!-- DOG NAMES Z-->
-    <string name="dogName245" translatable="false">ZENTRALASIATISCHER OWTSCHARKA</string>
-    <string name="dogName246" translatable="false">ZWERGDACKEL</string>
-    <string name="dogName247" translatable="false">ZWERGPINSCHER</string>
-    <string name="dogName248" translatable="false">ZWERGPUDEL</string>
-    <string name="dogName249" translatable="false">ZWERGSCHNAUZER</string>
-    <string name="dogName250" translatable="false">ZWERGSPITZ</string>
+    <string name="dogs_Z" translatable="false">DOGS Z</string>
+    <string name="dogName247" translatable="false">ZENTRALASIATISCHER OWTSCHARKA</string>
+    <string name="dogName248" translatable="false">ZWERGDACKEL</string>
+    <string name="dogName249" translatable="false">ZWERGPINSCHER</string>
+    <string name="dogName250" translatable="false">ZWERGPUDEL</string>
+    <string name="dogName251" translatable="false">ZWERGSCHNAUZER</string>
+    <string name="dogName252" translatable="false">ZWERGSPITZ</string>
 
     <!-- UI -->
     <string name="dogs" translatable="false">DOGS</string>
-    <string name="my_perfect_dog" translatable="false">My Perfeckt Dog</string>
-    <string name="die_vielfalt_der_hunderassen_ist_gro_jede_einzelne_zeichnet_sich_durch_ihr_besonderes_aussehen_einen_individuellen_charakter_und_spezielle_bed_rfnisse_aus_bevor_sie_in_die_riesige_welt_der_hunderassen_eintauchen_erfahren_sie_hier_mehr_ber_ihre_besonderheiten_und_entstehung" translatable="false">Die Vielfalt der Hunderassen ist groß. Jede einzelne zeichnet sich durch ihr besonderes Aussehen, einen individuellen Charakter und spezielle Bedürfnisse aus. Bevor Sie in die riesige Welt der Hunderassen eintauchen, erfahren Sie hier mehr über ihre Besonderheiten und Entstehung.</string>
+    <string name="my_perfect_dog" translatable="false">My Perfect Dog</string>
+    <string name="die_vielfalt_der_hunderassen_ist_gross_jede_einzelne_zeichnet_sich_durch_ihr_besonderes_aussehen_einen_individuellen_charakter_und_spezielle_beduerfnisse_aus_bevor_sie_in_die_riesige_welt_der_hunderassen_eintauchen_erfahren_sie_hier_mehr_ueber_ihre_besonderheiten_und_entstehung" translatable="false">
+        Die Vielfalt der Hunderassen ist groß. Jede einzelne zeichnet sich durch ihr besonderes Aussehen, einen individuellen Charakter und spezielle Bedürfnisse aus.
+        Bevor Sie in die riesige Welt der Hunderassen eintauchen, erfahren Sie hier mehr über ihre Besonderheiten und Entstehung.</string>
     <string name="textview" translatable="false">TextView</string>
     <string name="dogtextview" translatable="false">TextView</string>
     <string name="new_user" translatable="false">new user</string>
     <string name="email" translatable="false">email</string>
     <string name="password" translatable="false">password</string>
     <string name="signup" translatable="false">signup</string>
-    <string name="cancel" translatable="false">cancel</string>
+    <string name="cancel" translatable="false" tools:ignore="ButtonCase">cancel</string>
     <string name="login" translatable="false">Login</string>
     <string name="sign_up" translatable="false">Sign Up</string>
     <string name="login_master" translatable="false">Login</string>
     <string name="password_master" translatable="false">password</string>
     <string name="start" translatable="false">START</string>
-	<string name="belgischer_sch_ferhund" translatable="false">Belgischer Schäferhund</string>
-    <string name="tvhistory_detail">tvHistory_Detail</string>
+	<string name="belgischer_schaeferhund" translatable="false">Belgischer Schäferhund</string>
+    <string name="tvhistory_detail" translatable="false">tvHistory_Detail</string>
+    
+    <!--CATEGORY'S-->
+    <string name="dogs_A_Z" translatable="false">DOGS A-Z</string>
+    <string name="dogs_xs" translatable="false">DOGS XS</string>
+    <string name="dogs_s" translatable="false">DOGS S</string>
+    <string name="dogs_m" translatable="false">DOGS M</string>
+    <string name="dogs_l" translatable="false">DOGS L</string>
+    <string name="dogs_xl" translatable="false">DOGS XL</string>
+    <string name="character" translatable="false">Character</string>
+    <string name="fci_classes" translatable="false">FCI-KLASSEN</string>
+    
 
 </resources>
