@@ -2,7 +2,7 @@ package de.syntaxinstitut.myperfectdog.data.remote
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import de.syntaxinstitut.myperfectdog.data.model.DogsList
+import de.syntaxinstitut.myperfectdog.data.model.DogsList_A_Z
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
@@ -19,12 +19,12 @@ private val retrofit = Retrofit.Builder()
 		.baseUrl(BASE_URL)
 	.build()
 
-interface DogApiService {
+interface DogsApiService {
 
 	@GET("https://myperfectdog-80c6e-default-rtdb.europe-west1.firebasedatabase.app/")
-	suspend fun getDogList(): DogsList
+	suspend fun getDogsList(): DogsList_A_Z
 }
 
-object DogApi {
-	val retrofitService: DogApiService by lazy { retrofit.create(DogApiService::class.java) }
+object DogsApi {
+	val retrofitService: DogsApiService by lazy { retrofit.create(DogsApiService::class.java) }
 }

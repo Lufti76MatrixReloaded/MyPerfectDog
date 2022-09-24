@@ -15,33 +15,8 @@
 			android:id="@+id/detailFragment"
 			android:name="de.syntaxinstitut.myperfectdog.ui.DetailFragment"
 			android:label="DetailFragment" />
-		<fragment
-			android:id="@+id/loginFragment"
-			android:name="de.syntaxinstitut.myperfectdog.ui.authentication.LoginFragment"
-			android:label="LoginFragment" >
-			<action
-				android:id="@+id/action_loginFragment_to_signUpFragment"
-				app:destination="@id/signUpFragment" />
-			<action
-				android:id="@+id/action_loginFragment_to_mainActivity"
-				app:destination="@id/mainActivity" />
-			<action
-				android:id="@+id/action_loginFragment_to_fragmentHome"
-				app:destination="@id/fragmentHome" />
-		</fragment>
-		<fragment
-			android:id="@+id/signUpFragment"
-			android:name="de.syntaxinstitut.myperfectdog.ui.authentication.SignUpFragment"
-			android:label="SignUpFragment" >
-			<action
-				android:id="@+id/action_signUpFragment_to_mainActivity"
-				app:destination="@id/mainActivity" />
-			<action
-				android:id="@+id/action_signUpFragment_to_fragmentHome"
-				app:destination="@id/fragmentHome" />
-		</fragment>
-		<activity
+	<activity
 			android:id="@+id/mainActivity"
-			android:name="de.syntaxinstitut.myperfectdog.MainActivity"
+			android:name="de.syntaxinstitut.myperfectdog.ui.main.MainActivity"
 			android:label="MainActivity" />
 	</navigation>

@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:tag="layout/fragment_signup"
-    android:textAlignment="gravity"
-    android:textDirection="anyRtl"
+    android:textAlignment="center"
     tools:background="#6E6EF3">
     
     <TextView
@@ -20,7 +19,6 @@
         android:text="@string/sign_up"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.AppCompat"
         android:textIsSelectable="false"
         android:textSize="48sp"
         android:textStyle="bold|italic"

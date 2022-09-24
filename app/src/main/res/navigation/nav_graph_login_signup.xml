@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/nav_graph_login_signup"
+	app:startDestination="@id/loginFragment2">
+	
+	<fragment
+		android:id="@+id/loginFragment2"
+		android:name="de.syntaxinstitut.myperfectdog.ui.authentication.LoginFragment"
+		android:label="LoginFragment" >
+		<action
+			android:id="@+id/action_loginFragment2_to_signUpFragment"
+			app:destination="@id/signUpFragment" />
+		<action
+			android:id="@+id/action_loginFragment2_to_mainFragment"
+			app:destination="@id/mainFragment" />
+	</fragment>
+	<fragment
+		android:id="@+id/signUpFragment"
+		android:name="de.syntaxinstitut.myperfectdog.ui.authentication.SignUpFragment"
+		android:label="SignUpFragment" >
+		<action
+			android:id="@+id/action_signUpFragment_to_mainFragment"
+			app:destination="@id/mainFragment" />
+	</fragment>
+	<fragment
+		android:id="@+id/mainFragment"
+		android:name="de.syntaxinstitut.myperfectdog.ui.main.MainFragment"
+		android:label="MainFragment" >
+		<action
+			android:id="@+id/action_mainFragment_to_categoryFragment"
+			app:destination="@id/categoryFragment" />
+		<action
+			android:id="@+id/action_mainFragment_to_navigation"
+			app:destination="@id/navigation" />
+		<action
+			android:id="@+id/action_mainFragment_to_mainActivity2"
+			app:destination="@id/mainActivity2" />
+	</fragment>
+	<activity
+		android:id="@+id/mainActivity2"
+		android:name="de.syntaxinstitut.myperfectdog.ui.main.MainActivity"
+		android:label="MainActivity" />
+	<fragment
+		android:id="@+id/categoryFragment"
+		android:name="de.syntaxinstitut.myperfectdog.ui.CategoryFragment"
+		android:label="CategoryFragment" >
+		<action
+			android:id="@+id/action_categoryFragment_to_detailFragment2"
+			app:destination="@id/detailFragment2" />
+		<action
+			android:id="@+id/action_categoryFragment_to_navigation"
+			app:destination="@id/navigation" />
+		<action
+			android:id="@+id/action_categoryFragment_to_mainActivity2"
+			app:destination="@id/mainActivity2" />
+		<action
+			android:id="@+id/action_categoryFragment_to_mainActivity22"
+			app:destination="@id/mainActivity2" />
+	</fragment>
+	<fragment
+		android:id="@+id/detailFragment2"
+		android:name="de.syntaxinstitut.myperfectdog.ui.DetailFragment"
+		android:label="DetailFragment" >
+		<action
+			android:id="@+id/action_detailFragment2_to_navigation"
+			app:destination="@id/navigation" />
+	</fragment>
+	<include app:graph="@navigation/nav_graph" />
+</navigation>

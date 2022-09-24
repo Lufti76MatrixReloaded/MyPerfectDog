@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import de.syntaxinstitut.myperfectdog.MainViewModel
 import de.syntaxinstitut.myperfectdog.R
+import de.syntaxinstitut.myperfectdog.ui.main.MainViewModel
 
 class CategoryFragment : Fragment() {
 

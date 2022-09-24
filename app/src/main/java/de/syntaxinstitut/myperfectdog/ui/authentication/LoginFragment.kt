@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.apicalls.R
 import de.syntaxinstitut.myperfectdog.MainViewModel
+import de.syntaxinstitut.myperfectdog.R
 import java.util.*
 
 class LoginFragment : Fragment() {

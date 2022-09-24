@@ -1,7 +1,6 @@
 package de.syntaxinstitut.myperfectdog.ui
 
 import android.os.Bundle
-import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import de.syntaxinstitut.myperfectdog.MainViewModel
 import de.syntaxinstitut.myperfectdog.R
-import de.syntaxinstitut.myperfectdog.databinding.Fragment06DogsDetailBinding
 import de.syntaxinstitut.myperfectdog.databinding.FragmentDetailBinding
 
 /**
@@ -39,7 +37,7 @@ class DetailFragment : Fragment() {
 	): View? {
 
 		binding = DataBindingUtil.inflate(
-			inflater, R.layout.fragment_06_dogs_detail, container, false
+				inflater, R.layout.fragment_dogs_detail, container, false
 		)
 		return binding.root
 	}

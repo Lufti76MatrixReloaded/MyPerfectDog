@@ -1,8 +1,9 @@
-package de.syntaxinstitut.myperfectdog
+package de.syntaxinstitut.myperfectdog.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import de.syntaxinstitut.myperfectdog.R
 import de.syntaxinstitut.myperfectdog.databinding.ActivityMainBinding
 
 /**

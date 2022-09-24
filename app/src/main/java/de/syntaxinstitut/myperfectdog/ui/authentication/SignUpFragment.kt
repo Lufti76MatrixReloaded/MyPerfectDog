@@ -9,10 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.example.apicalls.R
-import de.syntaxinstitut.myperfectdog.MainViewModel
-import de.syntaxinstitut.myperfectdog.ui.Main.MainViewModel
-import kotlinx.coroutines.Dispatchers.Main
+import de.syntaxinstitut.myperfectdog.R
+import de.syntaxinstitut.myperfectdog.ui.main.MainViewModel
 
 class SignUpFragment : Fragment() {
 

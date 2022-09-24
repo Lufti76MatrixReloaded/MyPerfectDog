@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<data>
+	
+	</data>
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/cl_dogslist_item"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#6E6EF3"
+		android:tag="layout/fragment_dogs list_item">
+		
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cv_dogslist_A_Z"
+			android:layout_width="150dp"
+			android:layout_height="120dp"
+			android:layout_margin="16dp"
+			app:cardCornerRadius="15dp"
+			app:cardElevation="5dp"
+			app:cardMaxElevation="10dp"
+			app:cardPreventCornerOverlap="true"
+			app:contentPadding="8dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:cardCornerRadius="10dp">
+			
+			<ImageView
+				android:id="@+id/iv_ImageDog"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:backgroundTintMode="multiply"
+				android:contentDescription="@string/dogName1"
+				android:hapticFeedbackEnabled="true"
+				android:isScrollContainer="true"
+				android:scaleType="centerCrop"
+				android:scrollbarAlwaysDrawVerticalTrack="true"
+				android:stateListAnimator="@anim/nav_default_enter_anim"
+				app:srcCompat="@drawable/affenpinscher" />
+		
+		</androidx.cardview.widget.CardView>
+		
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cv_dogslist_XS_S"
+			android:layout_width="150dp"
+			android:layout_height="120dp"
+			android:layout_margin="16dp"
+			app:cardCornerRadius="15dp"
+			app:cardElevation="5dp"
+			app:cardMaxElevation="10dp"
+			app:cardPreventCornerOverlap="true"
+			app:contentPadding="8dp"
+			app:layout_constraintEnd_toEndOf="@+id/cv_dogslist_A_Z"
+			app:layout_constraintStart_toStartOf="@+id/cv_dogslist_A_Z"
+			app:layout_constraintTop_toBottomOf="@+id/cv_dogslist_A_Z">
+			
+			<ImageView
+				android:id="@+id/iv_dogs_XS_S"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:backgroundTintMode="multiply"
+				android:contentDescription="@string/dogName74"
+				android:isScrollContainer="true"
+				android:scaleType="centerCrop"
+				android:scrollbarAlwaysDrawVerticalTrack="true"
+				android:stateListAnimator="@anim/nav_default_enter_anim"
+				app:srcCompat="@drawable/dackel"
+				tools:hapticFeedbackEnabled="true" />
+		
+		</androidx.cardview.widget.CardView>
+		
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cv_dogslist_M"
+			android:layout_width="150dp"
+			android:layout_height="120dp"
+			android:layout_margin="16dp"
+			app:cardCornerRadius="15dp"
+			app:cardElevation="5dp"
+			app:cardMaxElevation="10dp"
+			app:cardPreventCornerOverlap="true"
+			app:contentPadding="8dp"
+			app:layout_constraintEnd_toEndOf="@+id/cv_dogslist_XS_S"
+			app:layout_constraintStart_toStartOf="@+id/cv_dogslist_XS_S"
+			app:layout_constraintTop_toBottomOf="@+id/cv_dogslist_XS_S">
+			
+			<ImageView
+				android:id="@+id/iv_dogslist_M"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:backgroundTintMode="multiply"
+				android:contentDescription="@string/dogName235"
+				android:isScrollContainer="true"
+				android:scaleType="centerCrop"
+				android:scrollbarAlwaysDrawVerticalTrack="true"
+				android:stateListAnimator="@anim/nav_default_enter_anim"
+				app:srcCompat="@drawable/tibet_terrier"
+				tools:hapticFeedbackEnabled="true" />
+		
+		</androidx.cardview.widget.CardView>
+		
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cv_dogslist_L_XL"
+			android:layout_width="150dp"
+			android:layout_height="120dp"
+			android:layout_margin="16dp"
+			app:cardCornerRadius="15dp"
+			app:cardElevation="5dp"
+			app:cardMaxElevation="10dp"
+			app:cardPreventCornerOverlap="true"
+			app:contentPadding="8dp"
+			app:layout_constraintEnd_toEndOf="@+id/cv_dogslist_M"
+			app:layout_constraintStart_toStartOf="@+id/cv_dogslist_M"
+			app:layout_constraintTop_toBottomOf="@+id/cv_dogslist_M">
+			
+			<ImageView
+				android:id="@+id/iv_dogslist_L_XL"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:backgroundTintMode="multiply"
+				android:contentDescription="@string/dogName235"
+				android:isScrollContainer="true"
+				android:scaleType="centerCrop"
+				android:scrollbarAlwaysDrawVerticalTrack="true"
+				app:srcCompat="@drawable/tibetan_mastiff"
+				tools:hapticFeedbackEnabled="true" />
+		
+		</androidx.cardview.widget.CardView>
+		
+		<androidx.cardview.widget.CardView
+			android:id="@+id/cv_fci_klassen"
+			android:layout_width="150dp"
+			android:layout_height="120dp"
+			android:layout_margin="16dp"
+			android:hapticFeedbackEnabled="false"
+			app:cardCornerRadius="15dp"
+			app:cardElevation="5dp"
+			app:cardMaxElevation="10dp"
+			app:cardPreventCornerOverlap="true"
+			app:contentPadding="8dp"
+			app:layout_constraintEnd_toEndOf="@+id/cv_dogslist_L_XL"
+			app:layout_constraintStart_toStartOf="@+id/cv_dogslist_L_XL"
+			app:layout_constraintTop_toBottomOf="@+id/cv_dogslist_L_XL">
+			
+			<ImageView
+				android:id="@+id/iv_fci_klassen"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:backgroundTintMode="multiply"
+				android:contentDescription="@string/fci_classes"
+				android:hapticFeedbackEnabled="true"
+				android:isScrollContainer="true"
+				android:scaleType="centerCrop"
+				android:scrollbarAlwaysDrawVerticalTrack="true"
+				app:srcCompat="@drawable/fci_klassen" />
+		</androidx.cardview.widget.CardView>
+		
+		<TextView
+			android:id="@+id/tv_dogslist_A_Z"
+			android:layout_width="200dp"
+			android:layout_height="120dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:layout_marginEnd="24dp"
+			android:text="TextView"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/cv_dogslist_A_Z"
+			app:layout_constraintTop_toTopOf="parent" />
+		
+		<TextView
+			android:id="@+id/tv_dogslist_XS_S"
+			android:layout_width="200dp"
+			android:layout_height="120dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="16dp"
+			android:text="TextView"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.04"
+			app:layout_constraintStart_toEndOf="@+id/cv_dogslist_XS_S"
+			app:layout_constraintTop_toBottomOf="@+id/tv_dogslist_A_Z" />
+		
+		<TextView
+			android:id="@+id/tv_dogslist_M"
+			android:layout_width="200dp"
+			android:layout_height="120dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="16dp"
+			android:text="TextView"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toEndOf="@+id/cv_dogslist_M"
+			app:layout_constraintTop_toBottomOf="@+id/tv_dogslist_XS_S" />
+		
+		<TextView
+			android:id="@+id/tv_dogslist_L_XL"
+			android:layout_width="200dp"
+			android:layout_height="120dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="16dp"
+			android:text="TextView"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toEndOf="@+id/cv_dogslist_L_XL"
+			app:layout_constraintTop_toBottomOf="@+id/tv_dogslist_M" />
+		
+		<TextView
+			android:id="@+id/textView5"
+			android:layout_width="200dp"
+			android:layout_height="120dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="16dp"
+			android:backgroundTintMode="multiply"
+			android:text="TextView"
+			android:textSize="14sp"
+			android:textStyle="bold|italic"
+			app:circularflow_defaultRadius="15dp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintStart_toEndOf="@+id/cv_fci_klassen"
+			app:layout_constraintTop_toBottomOf="@+id/tv_dogslist_L_XL" />
+	
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
