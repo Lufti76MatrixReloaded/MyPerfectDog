@@ -5,7 +5,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto">
 		<fragment
 			android:id="@+id/fragmentHome"
-			android:name="de.syntaxinstitut.myperfectdog.ui.FragmentHome"
+			android:name="de.syntaxinstitut.doggy_guide.ui.FragmentHome"
 			android:label="FragmentHome" >
 			<action
 				android:id="@+id/action_fragmentHome_to_detailFragment"
@@ -13,10 +13,10 @@
 		</fragment>
 		<fragment
 			android:id="@+id/detailFragment"
-			android:name="de.syntaxinstitut.myperfectdog.ui.DetailFragment"
+			android:name="de.syntaxinstitut.doggy_guide.ui.DetailFragment"
 			android:label="DetailFragment" />
 	<activity
 			android:id="@+id/mainActivity"
-			android:name="de.syntaxinstitut.myperfectdog.ui.main.MainActivity"
+			android:name="de.syntaxinstitut.doggy_guide.ui.main.MainActivity"
 			android:label="MainActivity" />
 	</navigation>

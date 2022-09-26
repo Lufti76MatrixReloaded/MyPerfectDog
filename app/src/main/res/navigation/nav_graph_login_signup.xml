@@ -6,7 +6,7 @@
 	
 	<fragment
 		android:id="@+id/loginFragment2"
-		android:name="de.syntaxinstitut.myperfectdog.ui.authentication.LoginFragment"
+		android:name="de.syntaxinstitut.doggy_guide.ui.authentication.LoginFragment"
 		android:label="LoginFragment" >
 		<action
 			android:id="@+id/action_loginFragment2_to_signUpFragment"
@@ -17,7 +17,7 @@
 	</fragment>
 	<fragment
 		android:id="@+id/signUpFragment"
-		android:name="de.syntaxinstitut.myperfectdog.ui.authentication.SignUpFragment"
+		android:name="de.syntaxinstitut.doggy_guide.ui.authentication.SignUpFragment"
 		android:label="SignUpFragment" >
 		<action
 			android:id="@+id/action_signUpFragment_to_mainFragment"
@@ -25,7 +25,7 @@
 	</fragment>
 	<fragment
 		android:id="@+id/mainFragment"
-		android:name="de.syntaxinstitut.myperfectdog.ui.main.MainFragment"
+		android:name="de.syntaxinstitut.doggy_guide.ui.main.MainFragment"
 		android:label="MainFragment" >
 		<action
 			android:id="@+id/action_mainFragment_to_categoryFragment"
@@ -39,11 +39,11 @@
 	</fragment>
 	<activity
 		android:id="@+id/mainActivity2"
-		android:name="de.syntaxinstitut.myperfectdog.ui.main.MainActivity"
+		android:name="de.syntaxinstitut.doggy_guide.ui.main.MainActivity"
 		android:label="MainActivity" />
 	<fragment
 		android:id="@+id/categoryFragment"
-		android:name="de.syntaxinstitut.myperfectdog.ui.CategoryFragment"
+		android:name="de.syntaxinstitut.doggy_guide.ui.CategoryFragment"
 		android:label="CategoryFragment" >
 		<action
 			android:id="@+id/action_categoryFragment_to_detailFragment2"
@@ -60,7 +60,7 @@
 	</fragment>
 	<fragment
 		android:id="@+id/detailFragment2"
-		android:name="de.syntaxinstitut.myperfectdog.ui.DetailFragment"
+		android:name="de.syntaxinstitut.doggy_guide.ui.DetailFragment"
 		android:label="DetailFragment" >
 		<action
 			android:id="@+id/action_detailFragment2_to_navigation"

@@ -7,13 +7,13 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/my_perfect_dog"
+        android:label="@string/doggy_guide"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
         tools:targetApi="31">
         <activity
-            android:name="de.syntaxinstitut.myperfectdog.ui.main.MainActivity"
+            android:name="de.syntaxinstitut.doggy_guide.ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

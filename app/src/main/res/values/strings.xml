@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- APP NAME -->
-    <string name="app_name" translatable="false">My Perfect Dog</string>
+    <string name="app_name" translatable="false">DOGGY GUIDE</string>
 
     <!-- DOG NAMES A-->
     <string name="dogs_A" translatable="false">DOGS A</string>
@@ -338,13 +338,13 @@
     
     <!--CATEGORY'S-->
     <string name="dogs_A_Z" translatable="false">DOGS A-Z</string>
-    <string name="dogs_xs" translatable="false">DOGS XS</string>
-    <string name="dogs_s" translatable="false">DOGS S</string>
+    <string name="dogs_s_xs" translatable="false">DOGS S / XS</string>
     <string name="dogs_m" translatable="false">DOGS M</string>
-    <string name="dogs_l" translatable="false">DOGS L</string>
-    <string name="dogs_xl" translatable="false">DOGS XL</string>
+    <string name="dogs_l_xl" translatable="false">DOGS L / XL</string>
     <string name="character" translatable="false">Character</string>
     <string name="fci_classes" translatable="false">FCI-KLASSEN</string>
-    
+	<string name="doggy_guide">strings</string>
+    <string name="dogs_api">https://dogbreeddb.p.rapidapi.com/paginated/</string>
+
 
 </resources>
