@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import de.syntaxinstitut.doggy_guide.MainViewModel
 import de.syntaxinstitut.doggy_guide.R
 import de.syntaxinstitut.doggy_guide.databinding.FragmentDetailBinding
@@ -19,44 +20,44 @@ import de.syntaxinstitut.myperfectdog.R
  */
 class DetailFragment : Fragment() {
 
-	private lateinit var binding: FragmentDetailBinding
+	private lateinit var binding: DetailFragmentDirections
 	private val viewModel: MainViewModel by activityViewModels()
 
 	private var dogsId: Long = 0
 
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
+	override fun onCreateView(
+		inflater: LayoutInflater,
+		container: ViewGroup?,
+		savedInstanceState: Bundle?,
+	                         ): View? {
+	
+		 fun onCreate(savedInstanceState: Bundle?) {
+			super.onCreate(savedInstanceState)
 
 		arguments?.let {
 			dogsId = it.getLong("id")
 		}
 	}
 
-	override fun onCreateView(
-		inflater: LayoutInflater,
-		container: ViewGroup?,
-		savedInstanceState: Bundle?,
-	): View? {
-
-		binding = DataBindingUtil.inflate(
-				inflater, R.layout.fragment_dogs_detail_adapter, container, false
-		)
+		binding = DataBindingUtil.inflate(inflater, R.layout.fragment_dogs_detail, container, false)
+		
 		return binding.root
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-		viewModel.dogs.observe(
-			viewLifecycleOwner,
-			Observer { list ->
-				var dogsList = list.find { it.id == dogsId }
+//		viewModel.dogs.observe(
+//		Observer { list ->
+//				var dogsList = list.find { it.id == dogsId }
 
-				if (dogsId != null) {
-					binding.detailImage.setImageResource(dogsId.javaClass)
-					binding.detailText.dogsDetailText = getString(dogsList.stringResource)
-				}
-			}
-		)
+//				if (dogsId != null) {
+//					binding.detailImage.setImageResource(dogsId.javaClass)
+//					binding.detailText.dogsDetailText = getString(dogsList.stringResource)
+//				}
+		
+		binding.detailLayout.setOnClickListener {
+			findNavController().navigateUp()
+		}
 	}
 }
 

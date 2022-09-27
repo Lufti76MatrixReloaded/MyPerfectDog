@@ -19,6 +19,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.core.Context
+import de.syntaxinstitut.doggy_guide.api.DogsApi
 import de.syntaxinstitut.doggy_guide.model.*
 import de.syntaxinstitut.doggy_guide.repository.DogsRepository
 import de.syntaxinstitut.doggy_guide.util.Resource
@@ -27,113 +28,48 @@ import okhttp3.internal.platform.android.AndroidLogHandler.getFilter
 import retrofit2.Response
 import java.io.IOException
 
-class MainViewModel(
-	app: Application,
-	private val dogsRepository : DogsRepository
-	) : AndroidViewModel(app){
+class MainViewModel : ViewModel() {
 
-	private val searchDogs: MutableLiveData<Resource<RandomDogs>> = MutableLiveData()
-	private val filter: MutableLiveData<Resource<RandomDogs>> = MutableLiveData()
-	private val details: MutableLiveData<Resource<RandomDogs>> = MutableLiveData()
-	private val categoriesList: MutableLiveData<Resource<CategoriesList>> = MutableLiveData()
-	var randomDogs: RandomDogs? = null
+//    wurde durch Repository ersetzt
+//    private val datasource = Datasource()
+
+	private val repository = Repository (DogsApi)
+
+//    private val _fans = MutableLiveData<List<Fan>>()
+//    val fans: LiveData<List<Fan>>
+//        get() = _fans
+
+	val fans: LiveData<List<Dogs>> = repository.categoriesList
+
+//    private val _test = MutableLiveData<String>()
+//    val test: LiveData<String>
+//        get() = _test
 
 	init {
-		getCategoryList()
-		getFilter("XS")
+//        _fans.value = datasource.loadFans()
+		loadData()
+//        loadTest()
 	}
 
-	private fun getSearch(search: String) = viewModelScope.launch {
-		safeGetSearch(search)
-	}
-
-	private fun getFilter(category: String) = viewModelScope.launch {
-		safeGetFilter(category)
-	}
-
-	fun getDetails(id: String) = viewModelScope.launch {
-		safeGetDetails(id)
-	}
-
-	private fun getCategoryList() = viewModelScope.launch {
-		safeGetCategoryList()
-	}
-
-	private fun handleDetailsDogs(response: Response<RandomDogs>): Resource<RandomDogs>? {
-		if (response.isSuccessful) {
-			response.body()?.let { resultResponse ->
-				return Resource.Success(resultResponse)
-			}
-		}
-		return Resource.Error(response.message())
-	}
-
-	private fun handleFilterDogs(response: Response<RandomDogs>): Resource<RandomDogs>? {
-		if (response.isSuccessful) {
-			response.body()?.let { resultResponse ->
-				return Resource.Success(resultResponse)
-			}
-		}
-		return Resource.Error(response.message())
-	}
-
-	private fun handleCategoryDogs(response: Response<CategoriesList>): Resource<CategoriesList> {
-		if (response.isSuccessful) {
-			response.body()?.let { resultResponse ->
-				return Resource.Success(resultResponse)
-			}
-		}
-		return Resource.Error(response.message())
-	}
-
-	private fun handleRandomDogs(response: Response<RandomDogs>): Resource<RandomDogs> {
-		if (response.isSuccessful) {
-			response.body()?.let { resultResponse ->
-				return Resource.Success(resultResponse)
-			}
-		}
-		return Resource.Error(response.message())
-	}
-
-	fun insertDogs() {
+	private fun loadData() {
 		viewModelScope.launch {
-			val dogs = Dogs(1, "affenpinscher", 1, 2, "S" )
-			dogsRepository.insert(dogs)
+			repository.getDogs()
 		}
 	}
 
-	fun updateDogs(dogs: Dogs) {
-		viewModelScope.launch {
-			dogsRepository.update(dogs)
-		}
+//  	fun addToCart() {
 	}
 
-	fun deleteDogs(dogs: Dogs) {
-		viewModelScope.launch {
-			dogsRepository.delete(dogs)
-		}
-	}
+//    private fun loadTest() {
+//        viewModelScope.launch {
+//            _test.value = FanApi.retrofitService.getFans()[0].imageResource
+//        }
 
-	fun getDogsById(dogsId: Long): Dogs {
-		var dogs: Dogs? = null
-		viewModelScope.launch {
-			dogs = dogsRepository.getDogsById(dogsId)
-		}
-		return idDogs
-	}
-
-	fun getAllDogs(): List<Dogs>? {
-		var dogs: List<Dogs>? = null
-		viewModelScope.launch {
-			dogs = dogsRepository.getAllDogs()
-		}
-		return dogs
-	}
-	/**
+}	/**
 	 * Das MainModel des Home Fragments
 	 */
 
-	private suspend fun safeGetCategoryList(){
+	suspend fun safeGetCategoryList( ) {
 		categoriesList.postValue(Resource.Loading())
 		try {
 			if(hasInternetConnection()) {
@@ -167,72 +103,12 @@ class MainViewModel(
 		}
 	}
 
-	private suspend fun safeGetSearch(search: String) {
-		searchDogs.postValue(Resource.Loading())
-		try {
-			if (hasInternetConnection()) {
-				val response = dogsRepository.getSearchDogs(search)
-				searchDogs.postValue(handleRandomDogs(response))
-			} else {
-				searchDogs.postValue(Resource.Error("No internet connection"))
-			}
-		} catch (t: Throwable) {
-			when (t) {
-				is IOException -> searchDogs.postValue(Resource.Error("Network failure"))
-				else -> searchDogs.postValue(Resource.Error("Conversion error"))
-			}
-		}
-	}
-
-	private suspend fun safeGetDetails(id: String) {
-		details.postValue(Resource.Loading())
-		try {
-			if (hasInternetConnection()) {
-				val response = dogsRepository.getDetails(id)
-				details.postValue(handleDetailsDogs(response))
-			} else {
-				details.postValue(Resource.Error("No internet connections"))
-			}
-		} catch (t: Throwable) {
-			when (t) {
-				is IOException -> details.postValue(Resource.Error("Network failure"))
-				else -> details.postValue(Resource.Error("Conversion error"))
-			}
-		}
-	}
-
-	// function for checking internet connection for API>=23 and <23
-	private fun hasInternetConnection(): Boolean {
-		val connectivityManager = getApplication<DoggyGuideApplication>()
-			.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-		if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M) {
-			val activeNetwork = connectivityManager.activeNetwork?: return false
-			val capabilities =
-				connectivityManager.getNetworkCapabilities(activeNetwork)?: return false
-			return when {
-				capabilities.hasTransport(TRANSPORT_WIFI) -> true
-				capabilities.hasTransport(TRANSPORT_CELLULAR) -> true
-				capabilities.hasTransport(TRANSPORT_ETHERNET) -> true
-				else -> false
-			}
-		} else {
-			connectivityManager.activeNetworkInfo?.run {
-				return when (type) {
-					TYPE_WIFI -> true
-					TYPE_MOBILE -> true
-					TYPE_ETHERNET -> true
-					else -> false
-				}
-			}
-		}
-		return false
-	}
-}
-		// Kommunikationspunkt mit der FirebaseAuth
+			// Kommunikationspunkt mit der FirebaseAuth
 	private val firebaseAuth = FirebaseAuth.getInstance() {
 
 			// currentuser is null wenn niemand eingeloggt ist
-			private val _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
+
+				 val _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
 			val currentUser: LiveData<FirebaseUser?>
 			get() = _currentUser
 

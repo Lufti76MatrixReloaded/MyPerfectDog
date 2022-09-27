@@ -4,52 +4,51 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.SnapHelper
 import de.syntaxinstitut.doggy_guide.R
-import de.syntaxinstitut.doggy_guide.model.CategoriesList
-import de.syntaxinstitut.doggy_guide.databinding.FragmentHomeBinding
+import de.syntaxinstitut.doggy_guide.adapter.DogAdapter
+import de.syntaxinstitut.myperfectdog.databinding.FragmentMainBinding
 
 
 class MainFragment : Fragment() {
 
 
-	private lateinit var rootView: View
+	private lateinit var binding: FragmentMainBinding
 
-	private lateinit var rv:RecyclerView
-	private lateinit var adapter: CategoriesList
-	private lateinit var binding: FragmentHomeBinding
-
-	private lateinit var viewModel: MainViewModel
+	private val viewModel: MainViewModel by activityViewModels()
 
 	override fun onCreateView(
-		inflater: LayoutInflater, container: ViewGroup?,
+		inflater: LayoutInflater,
+		container: ViewGroup?,
 		savedInstanceState: Bundle?
-	): View? {
-		return inflater.inflate(R.layout.fragment_main, container, false)
-	}
-		//!binding = inflate(inflater, R.layout.fragment_main, container, false)
+	                         ): View? {
 
-		//!return binding.root
+		(activity as MainActivity).showToolbar()
+
+		binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+
+		return binding.root
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-		super.onViewCreated(view, savedInstanceState)
-		rootView = view
 
-		initRecyclerView()
-		mainViewModel = ViewModelProvider(requireActivity(),MainViewModelFactory(requireActivity().get(MainViewModel::class.java)))
-		mainViewModel.getLiveDogsList().observe(viewLifeCycleOwner, Observer{items ->
-			adapter.updateContent(ArrayList(items))
-		})
-	}
+		val dogAdapter = DogAdapter()
 
-	private fun initRecyclerView()
-	{
-		rv = rootView.findViewById(R.id.main_rv)
-		adapter = CategoriesList(ArrayList())
-		rv.adapter = adapter
+		binding.dogsRecycler.adapter = dogAdapter
+
+		viewModel.dogs.observe {
+			viewLifecycleOwner,
+			Observer {
+				dogAdapter.submitList(it)
+			}
+		}
+
+		val snapHelper: SnapHelper = PagerSnapHelper()
+		snapHelper.attachToRecyclerView(binding.dogsRecycler)
 	}
 }

@@ -8,12 +8,12 @@
 	<data>
 	
 	</data>
-
+	
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/cl_dogslist_item"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:background="#6E6EF3"
+		android:background="#DF3C3CE8"
 		android:tag="layout/fragment_dogs list_item">
 		
 		<androidx.cardview.widget.CardView
@@ -21,7 +21,8 @@
 			android:layout_width="wrap_content"
 			android:layout_height="220dp"
 			android:layout_margin="16dp"
-			android:backgroundTint="#DF3C3CE8"
+			android:background="@color/material_dynamic_primary50"
+			android:backgroundTint="#9E015A91"
 			app:cardCornerRadius="15dp"
 			app:cardElevation="5dp"
 			app:cardMaxElevation="10dp"
@@ -48,8 +49,7 @@
 				android:scrollbarAlwaysDrawVerticalTrack="true"
 				android:stateListAnimator="@anim/nav_default_enter_anim"
 				android:verticalScrollbarPosition="right"
-				app:srcCompat="@drawable/affenpinscher"
-				tools:ignore="ImageContrastCheck" />
+				app:srcCompat="@drawable/affenpinscher" />
 			
 			<TextView
 				android:id="@+id/tv_dogslist_A_Z"
@@ -82,7 +82,7 @@
 			android:layout_width="280dp"
 			android:layout_height="220dp"
 			android:layout_margin="16dp"
-			android:backgroundTint="#DF3C3CE8"
+			android:backgroundTint="#9E015A91"
 			app:cardCornerRadius="15dp"
 			app:cardElevation="5dp"
 			app:cardMaxElevation="10dp"
@@ -128,7 +128,7 @@
 			android:layout_width="280dp"
 			android:layout_height="220dp"
 			android:layout_margin="16dp"
-			android:backgroundTint="#DF3C3CE8"
+			android:backgroundTint="#9E015A91"
 			app:cardCornerRadius="15dp"
 			app:cardElevation="5dp"
 			app:cardMaxElevation="10dp"
@@ -174,7 +174,7 @@
 			android:layout_width="280dp"
 			android:layout_height="220dp"
 			android:layout_margin="16dp"
-			android:backgroundTint="#DF3C3CE8"
+			android:backgroundTint="#9E015A91"
 			app:cardCornerRadius="15dp"
 			app:cardElevation="5dp"
 			app:cardMaxElevation="10dp"
@@ -217,7 +217,7 @@
 			android:layout_width="280dp"
 			android:layout_height="220dp"
 			android:layout_margin="16dp"
-			android:backgroundTint="#DF3C3CE8"
+			android:backgroundTint="#9E015A91"
 			android:hapticFeedbackEnabled="false"
 			app:cardCornerRadius="15dp"
 			app:cardElevation="5dp"

@@ -14,7 +14,11 @@
 		<fragment
 			android:id="@+id/detailFragment"
 			android:name="de.syntaxinstitut.doggy_guide.ui.DetailFragment"
-			android:label="DetailFragment" />
+			android:label="DetailFragment" >
+			<action
+				android:id="@+id/action_detailFragment_to_mainActivity"
+				app:destination="@id/mainActivity" />
+		</fragment>
 	<activity
 			android:id="@+id/mainActivity"
 			android:name="de.syntaxinstitut.doggy_guide.ui.main.MainActivity"

@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- APP NAME -->
     <string name="app_name" translatable="false">DOGGY GUIDE</string>
 
@@ -345,6 +345,10 @@
     <string name="fci_classes" translatable="false">FCI-KLASSEN</string>
 	<string name="doggy_guide">strings</string>
     <string name="dogs_api">https://dogbreeddb.p.rapidapi.com/paginated/</string>
+	<string name="dogs_size_xs_s"><![CDATA[Dogs size: XS & S]]></string>
+    <string name="dogs_size_m">Dogs size: M</string>
+    <string name="dogs_size_l_xl"><![CDATA[Dogs size: L & XL]]></string>
+    <string name="hunderassen_liste_fci_klassen">Hunderassen-Liste / FCI-Klassen</string>
 
 
 </resources>

@@ -1,4 +1,4 @@
-package de.syntaxinstitut.doggy_guide.data.db
+package de.syntaxinstitut.doggy_guide.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

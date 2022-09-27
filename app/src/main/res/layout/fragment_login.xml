@@ -10,7 +10,7 @@
 		android:id="@+id/login_view"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:background="#6E6EF3"
+		android:background="#DF3C3CE8"
 		android:textAlignment="gravity"
 		android:textDirection="inherit"
 		app:layout_constraintBottom_toBottomOf="parent"

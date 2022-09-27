@@ -18,11 +18,11 @@ class SaveAdapter : RecyclerView.Adapter<SaveAdapter.ViewHolder>() {
 		}
 
 		override fun areContentsTheSame(oldItem: Detail, newItem: Detail): Boolean {
-			return oldItem == newItem
+			return oldItem !== newItem
 		}
 
 	}
-	val differ = AsyncListDiffer(this, differCallback)
+	private val differ = AsyncListDiffer(this, differCallback)
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 		return ViewHolder(
 				LayoutInflater.from(parent.context).inflate(R.layout.item_save, parent, false)
@@ -32,9 +32,9 @@ class SaveAdapter : RecyclerView.Adapter<SaveAdapter.ViewHolder>() {
 	override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 		val save = differ.currentList[position]
 		holder.itemView.apply {
-			Glide.with(context).load(save.strMealThumb).into(image_view_saved_meal)
+			Glide.with(context).load(save.toString()).into(image_view_saved_meal)
 			text_view_saved_meal_title.text = save.strMeal
-//            text_view_saved_meal_description.text = save.strCategory
+			text_view_saved_dog_description.text = save.Category
 			setOnClickListener {
 				onItemClickListener?.let { it(save) }
 			}

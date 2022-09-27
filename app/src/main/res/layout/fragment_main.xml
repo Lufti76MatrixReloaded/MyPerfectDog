@@ -20,14 +20,14 @@
 			android:id="@+id/sc_activity_main"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:background="#6E6EF3"
+			android:background="#DF3C3CE8"
 			android:contentDescription="@string/default_web_client_id"
 			app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintHorizontal_bias="0.0"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintVertical_bias="1.0">
+			app:layout_constraintVertical_bias="0.0">
 			
 			<TextView
 				android:id="@+id/titel_text_View"
@@ -77,6 +77,17 @@
 			app:layout_constraintStart_toStartOf="@+id/iv_activity_main"
 			app:layout_constraintTop_toBottomOf="@+id/iv_activity_main"
 			tools:ignore="DuplicateSpeakableTextCheck" />
+		
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="100dp"
+			android:layout_height="42dp"
+			android:layout_marginTop="8dp"
+			android:text="Button"
+			app:layout_constraintEnd_toEndOf="@+id/tv_Einleitung"
+			app:layout_constraintStart_toStartOf="@+id/tv_Einleitung"
+			app:layout_constraintTop_toBottomOf="@+id/tv_Einleitung"
+			tools:ignore="TouchTargetSizeCheck" />
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 	

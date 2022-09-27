@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cl_dogslist"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#DF3C3CE8">
     
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_dogslist"
         android:layout_width="415dp"
         android:layout_height="738dp"
         android:layout_marginBottom="555dp"
-        android:background="#6E6EF3"
+        android:background="#DF3C3CE8"
         android:isScrollContainer="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

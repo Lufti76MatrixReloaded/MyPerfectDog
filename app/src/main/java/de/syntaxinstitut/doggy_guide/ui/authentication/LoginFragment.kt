@@ -6,53 +6,36 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.apicalls.R
-import de.syntaxinstitut.doggy_guide.MainViewModel
 import de.syntaxinstitut.doggy_guide.R
+import de.syntaxinstitut.doggy_guide.ui.main.MainActivity
+import de.syntaxinstitut.myperfectdog.databinding.FragmentMainBinding
 import java.util.*
 
 class LoginFragment : Fragment() {
 
-    private lateinit var binding: LoginFragment
-
-    private val viewModel: MainViewModel by activityViewModels()
+    lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View {
+        savedInstanceState: Bundle?
+                             ): View? {
+        (activity as MainActivity).hideToolbar()
+
+        (activity as MainActivity).hideToolbar()
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        binding..setOnClickListener {
-            findNavController().navigate(LoginFragment.actionLoginFragmentToSignUpFragment())
+        binding.loginLoginButton.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragment2ToSignUpFragment())
         }
-
-        binding.loginFragment.loginBtn.setOnClickListener {
-            val email = binding.LoginFragment.loginEmailEdit.text.toString()
-            val password = binding.LoginFragment.loginPasswordEdit.text.toString()
-
-            if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
-                viewModel.login(email, password)
-            }
-        }
-
-        viewModel.dogs.observe(
-            Observer(
-            ) lifeCycleOwner
-        ) {
-            if (it != null) {
-                findNavController()
-                    .navigate(R.id.loginFragment)
-            }
+        binding.loginSignUpButton.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragment2ToMainFragment())
         }
     }
 }

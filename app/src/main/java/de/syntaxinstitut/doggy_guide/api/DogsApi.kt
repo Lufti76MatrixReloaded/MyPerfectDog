@@ -13,16 +13,6 @@ import retrofit2.http.Query
 
 const val BASE_URL = "https://dogbreeddb.p.rapidapi.com/paginated/"
 
-val client = OkHttpClient()
-
-val request = Request.Builder()
-	.url("https://dogbreeddb.p.rapidapi.com/paginated/")
-	.get()
-	.addHeader("X-RapidAPI-Key", "5d4b62fdeamsh4cdc539d4be5c4fp1fa087jsnec26af487002")
-	.addHeader("X-RapidAPI-Host", "dogbreeddb.p.rapidapi.com")
-	.build()
-
-val response = client.newCall(request).execute()
 
 private val moshi = Moshi.Builder()
 	.add(KotlinJsonAdapterFactory())
@@ -33,16 +23,16 @@ private val retrofit = Retrofit.Builder()
 	.baseUrl(BASE_URL)
 	.build()
 
-interface ApiDogDataList {
-	@GET("https://dogbreeddb.p.rapidapi.com/paginated/")
-	suspend fun getDogsList(@Query("lat") lat: Double,
-	                        @Query("lon") lon: Double, @Query("appid") appid: String
-	                       ) : Dogs
+interface DogsApi {
+
+	@GET("data.json")
+	suspend fun getDogs(): List<Dogs>
 }
 object DogsApi {
-	val retrofitService: ApiDogDataList by lazy {
-		retrofit.create(ApiDogDataList::class.java)
+	val retrofitService: DogsApi by lazy {
+		retrofit.create(DogsApi::class.java)
 	}
+
 }
 
 

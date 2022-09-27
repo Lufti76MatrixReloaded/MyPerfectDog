@@ -1,8 +1,8 @@
-package de.syntaxinstitut.doggy_guide.data.db
+package de.syntaxinstitut.doggy_guide.db
 
 import de.syntaxinstitut.doggy_guide.model.Dogs
 
-class Database {
+ class Database {
 
 	fun loadDogs(): List<Dogs> {
 
@@ -23,7 +23,6 @@ class Database {
 						"groß"
 				    ),
 				Dogs(
-
 						3,
 						"Airdale Terrier",
 						3,
@@ -31,7 +30,6 @@ class Database {
 						"mittel"
 				    ),
 				Dogs(
-
 						4,
 						"Akita Inu",
 						4,
@@ -39,7 +37,6 @@ class Database {
 						"groß"
 				    ),
 				Dogs(
-
 						5,
 						"Alaskan Husky",
 						5,
@@ -47,7 +44,6 @@ class Database {
 						"groß"
 				    ),
 				Dogs(
-
 						6,
 						"Alaskan Malamute",
 						6,
@@ -55,7 +51,6 @@ class Database {
 						"groß",
 				    ),
 				Dogs(
-
 						7,
 						"Alopekis",
 						7,

@@ -1,10 +1,9 @@
 package de.syntaxinstitut.doggy_guide.repository
 
-import android.app.Application
 import android.provider.SyncStateContract.Helpers.insert
 import android.provider.SyncStateContract.Helpers.update
 import androidx.lifecycle.LiveData
-import de.syntaxinstitut.doggy_guide.data.db.DogsDao
+import de.syntaxinstitut.doggy_guide.db.DogsDao
 import de.syntaxinstitut.doggy_guide.data.db.DogDatabase
 import de.syntaxinstitut.doggy_guide.model.Dogs
 import kotlinx.coroutines.Dispatchers

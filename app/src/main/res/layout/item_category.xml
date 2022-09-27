@@ -18,6 +18,7 @@
 		android:id="@+id/cl2_category"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+		android:background="#DF3C3CE8"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
@@ -33,9 +34,10 @@
 		android:layout_marginTop="1dp"
 		android:layout_marginEnd="1dp"
 		android:layout_marginBottom="1dp"
+		android:background="#DF3C3CE8"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@+id/filter_category"
-		tools:ignore="ExtraText,SpeakableTextPresentCheck"/>
+		tools:ignore="ExtraText,SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
